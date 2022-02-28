@@ -31,7 +31,7 @@ public class Bonus extends Homework{
             ArrayList<String> visited = new ArrayList<String>();
             visited.add(word);
 
-            visited = DFS( matrix, words, visited, words.indexOf(word) );
+            visited = DFS(visited, words.indexOf(word) );
 
             // checking if the result is better
             if( arrayOfCycle.size() < visited.size() )
@@ -39,7 +39,7 @@ public class Bonus extends Homework{
         }
     }
 
-    public ArrayList<String> DFS( boolean[][] matrix, ArrayList<String> words, ArrayList<String> visited, int actualPos ){
+    public ArrayList<String> DFS(ArrayList<String> visited, int actualPos ){
 
         /*
         checking only if we visited more than one word
@@ -67,7 +67,7 @@ public class Bonus extends Homework{
                     ArrayList<String> tempVisited = new ArrayList<>(visited);
                     tempVisited.add(words.get(column));
 
-                    tempVisited = DFS(matrix, words, tempVisited, column);
+                    tempVisited = DFS(tempVisited, column);
 
                     if( best.size() < tempVisited.size() )
                         best = tempVisited;

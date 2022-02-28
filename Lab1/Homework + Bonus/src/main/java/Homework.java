@@ -156,6 +156,15 @@ public class Homework {
             System.out.println("Cuvant: " + word);
     }
 
+    public void printMatrix(){
+        for( boolean[] list : matrix ){
+            for( boolean value : list ){
+                System.out.print(value + "  ");
+            }
+            System.out.println();
+        }
+    }
+
     public void printArraysOfNeighbors(){
 
         int counter = 0;
@@ -171,5 +180,3 @@ public class Homework {
         System.out.println();
     }
 }
-
-
