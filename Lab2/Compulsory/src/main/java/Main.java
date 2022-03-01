@@ -45,6 +45,7 @@ public class Main {
             System.out.println(room.toString());
         }
 
+
         System.out.println();
 
         ArrayList<Event> events = addEvents();
