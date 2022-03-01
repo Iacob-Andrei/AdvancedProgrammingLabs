@@ -2,10 +2,15 @@ import java.util.ArrayList;
 
 public class Problem {
 
-    public static ArrayList<Room> rooms;
-    public static ArrayList<Event> events;
+    public ArrayList<Room> rooms;
+    public ArrayList<Event> events;
 
-    public static void addToRooms(Room obj){
+    Problem(){
+        addRooms();
+        addEvents();
+    }
+
+    public void addToRooms(Room obj){
 
         for( Room room : rooms ){
             if( room.equals(obj) ){
@@ -16,7 +21,19 @@ public class Problem {
         rooms.add(obj);
     }
 
-    public static void addRooms(){
+    public void addToEvents(Event obj){
+
+        for( Event event : events ){
+            if( event.equals(obj) ){
+                System.out.println("Evenimentul " + obj.getName() + " deja exista!");
+                return;
+            }
+        }
+
+        events.add(obj);
+    }
+
+    public void addRooms(){
 
         rooms = new ArrayList<Room>();
 
@@ -32,7 +49,7 @@ public class Problem {
         addToRooms(room4);
     }
 
-    public static void addEvents() {
+    public void addEvents() {
 
         events = new ArrayList<Event>();
 
@@ -42,27 +59,25 @@ public class Problem {
         Event event4 = new Event("L2", 25, 10, 12);
         Event event5 = new Event("L3", 25, 10, 12);
 
-        events.add(event1);
-        events.add(event2);
-        events.add(event3);
-        events.add(event4);
-        events.add(event5);
+        addToEvents(event1);
+        addToEvents(event2);
+        addToEvents(event3);
+        addToEvents(event4);
+        addToEvents(event5);
     }
 
-    public static void main(String[] args) {
+    public void printRooms(){
 
-        addRooms();
-        for( Room room : rooms ){
+        for(Room room : rooms){
             System.out.println(room.toString());
         }
-
-        System.out.println();
-
-        /*
-        addEvents();
-        for( Event event : events ){
-            System.out.println(event.toString());
-        }
-         */
     }
+
+    public void printEvents(){
+
+        for(Event event : events){
+            System.out.println(event);
+        }
+    }
+
 }
