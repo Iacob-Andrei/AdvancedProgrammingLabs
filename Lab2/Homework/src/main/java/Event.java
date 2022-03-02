@@ -46,7 +46,7 @@ public class Event {
 
     @Override
     public String toString() {
-        return getName() + "(size=" + getNumberOfParticipants() + ", start=" + getStart() + ", end=" + getEnd();
+        return getName() + "(size=" + getNumberOfParticipants() + ", start=" + getStart() + ", end=" + getEnd() + ")";
     }
 
 }

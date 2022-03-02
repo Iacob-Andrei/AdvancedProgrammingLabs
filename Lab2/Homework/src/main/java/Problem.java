@@ -1,3 +1,5 @@
+import jdk.swing.interop.SwingInterOpUtils;
+
 import java.util.ArrayList;
 
 public class Problem {
@@ -38,8 +40,8 @@ public class Problem {
         rooms = new ArrayList<Room>();
 
         Room room1 = new LabRoom("Windows", "401", 30);
-        Room room2 = new LabRoom("Mac OS", "403", 30);
-        Room room3 = new LabRoom( "Ubuntu","405", 30 );
+        Room room2 = new LabRoom("Mac OS", "403", 25);
+        Room room3 = new LabRoom( "Ubuntu","405", 10 );
         Room room4 = new LectureHall(true, "309", 100);
 
         addToRooms(room1);
@@ -68,16 +70,20 @@ public class Problem {
 
     public void printRooms(){
 
+        System.out.println();
         for(Room room : rooms){
             System.out.println(room.toString());
         }
+        System.out.println();
     }
 
     public void printEvents(){
 
+        System.out.println();
         for(Event event : events){
             System.out.println(event);
         }
+        System.out.println();
     }
 
 }
