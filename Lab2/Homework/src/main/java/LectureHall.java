@@ -1,5 +1,3 @@
-import java.util.Objects;
-
 public class LectureHall extends Room{
 
     private boolean videoProjector;
@@ -8,7 +6,7 @@ public class LectureHall extends Room{
         this.videoProjector = videoProjector;
         this.name = name;
         this.capacity = capacity;
-        this.type = "lecture hall";
+        this.type = "Course hall";
     }
 
     public boolean getVideoProjector(){

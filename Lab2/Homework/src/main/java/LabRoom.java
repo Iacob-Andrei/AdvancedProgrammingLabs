@@ -6,7 +6,7 @@ public class LabRoom extends Room{
         this.operatingSystem = operatingSystem;
         this.name = name;
         this.capacity = capacity;
-        this.type = "lab";
+        this.type = "Lab";
     }
 
     public String getOperatingSystem(){
