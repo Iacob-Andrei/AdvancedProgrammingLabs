@@ -2,6 +2,12 @@ public class LabRoom extends Room{
 
     private String operatingSystem;
 
+    /**
+     * initializes the variables
+     * @param operatingSystem - the operating system on the computers at the lab
+     * @param name - name of the room
+     * @param capacity - the capacity
+     */
     public LabRoom(String operatingSystem, String name, int capacity){
         this.operatingSystem = operatingSystem;
         this.name = name;
@@ -47,6 +53,10 @@ public class LabRoom extends Room{
     }
 
     @Override
+    /**
+     * overrides the equal method from Object class
+     * @return true if the two rooms have the same name, false if not
+     */
     public boolean equals(Object obj) {
 
         if (obj == null) return false;

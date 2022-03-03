@@ -2,6 +2,12 @@ public class LectureHall extends Room{
 
     private boolean videoProjector;
 
+    /**
+     * initializes the variables
+     * @param videoProjector - true if the room has a video projector, false if not
+     * @param name - name of the room
+     * @param capacity - the capacity
+     */
     public LectureHall(boolean videoProjector, String name, int capacity) {
         this.videoProjector = videoProjector;
         this.name = name;
@@ -42,6 +48,9 @@ public class LectureHall extends Room{
     }
 
     @Override
+    /**
+     * returns all the data from the object
+     */
     public String toString(){
 
         if( videoProjector )
@@ -51,6 +60,10 @@ public class LectureHall extends Room{
     }
 
     @Override
+    /**
+     * overrides the equal method from Object class
+     * @return true if the two rooms have the same name, false if not
+     */
     public boolean equals(Object obj) {
 
         if (obj == null) return false;

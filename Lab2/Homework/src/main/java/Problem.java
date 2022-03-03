@@ -5,11 +5,20 @@ public class Problem {
     public ArrayList<Room> rooms;
     public ArrayList<Event> events;
 
+    /**
+     * constructor
+     * initializes the "rooms" and "events" ArrayLists using the "addRooms" and "addEvents" methods
+     */
     Problem(){
         addRooms();
         addEvents();
     }
 
+    /**
+     * method check if the room was already added
+     * if not, room is added to the "rooms" ArrayList
+     * @param obj - the room that wants to be added
+     */
     public void addToRooms(Room obj){
 
         for( Room room : rooms ){
@@ -21,6 +30,11 @@ public class Problem {
         rooms.add(obj);
     }
 
+    /**
+     * method check if the event was already added
+     * if not, event is added to the "events" ArrayList
+     * @param obj - the event that wants to be added
+     */
     public void addToEvents(Event obj){
 
         for( Event event : events ){
@@ -33,6 +47,9 @@ public class Problem {
         events.add(obj);
     }
 
+    /**
+     * method used to add some rooms
+     */
     public void addRooms(){
 
         rooms = new ArrayList<Room>();
@@ -49,6 +66,9 @@ public class Problem {
         addToRooms(room4);
     }
 
+    /**
+     * method used to add some events
+     */
     public void addEvents() {
 
         events = new ArrayList<Event>();
@@ -66,6 +86,9 @@ public class Problem {
         addToEvents(event5);
     }
 
+    /**
+     * method used to print all the rooms
+     */
     public void printRooms(){
 
         System.out.println();
@@ -75,6 +98,9 @@ public class Problem {
         System.out.println();
     }
 
+    /**
+     * method used to print all the events
+     */
     public void printEvents(){
 
         System.out.println();
