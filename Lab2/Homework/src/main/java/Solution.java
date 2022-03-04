@@ -93,8 +93,9 @@ public class Solution {
         Problem myProblem = new Problem();
         Solution solution = new Solution(myProblem);
 
-        myProblem.printEvents();
-        myProblem.printRooms();
         //solution.assignRoomToEvent();
+
+        DSatur bonus = new DSatur(myProblem);
+        bonus.degreeOfSaturation();
     }
 }
