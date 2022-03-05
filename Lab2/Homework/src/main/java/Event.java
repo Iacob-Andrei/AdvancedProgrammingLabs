@@ -67,7 +67,7 @@ public class Event {
     public boolean equals(Object obj) {
 
         if (obj == null) return false;
-            if (!(obj instanceof Event)) return false;
+        if (!(obj instanceof Event)) return false;
 
         Event that = (Event) obj;
         return getName().equals(that.getName());
