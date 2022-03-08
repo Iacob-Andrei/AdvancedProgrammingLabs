@@ -17,6 +17,7 @@ public class Main {
         network.addNode(node3);
     }
 
+    
     public static void main(String[] args) {
 
         Network network = new Network();
