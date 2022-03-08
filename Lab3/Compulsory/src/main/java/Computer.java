@@ -21,7 +21,12 @@ public class Computer extends Node implements Identifiable, Storage {
 
     @Override
     public String toString() {
-        return IPaddress + "  " + storageCapacity + "  " + name;
+        return name + "(Computer)";
+    }
+
+    @Override
+    public int compareTo(Node other) {
+        return this.name.compareTo(other.getName());
     }
 
     @Override

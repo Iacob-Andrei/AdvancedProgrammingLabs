@@ -2,6 +2,11 @@ public class Switch extends Node implements Identifiable{
 
     private String IPaddress;
 
+    public Switch(String IPaddress, String name) {
+        this.IPaddress = IPaddress;
+        this.name = name;
+    }
+
     @Override
     public String getName() {
         return name;
@@ -14,7 +19,7 @@ public class Switch extends Node implements Identifiable{
 
     @Override
     public String toString() {
-        return IPaddress + "  " + name;
+        return name + "(Switch)";
     }
 
     @Override
@@ -26,4 +31,10 @@ public class Switch extends Node implements Identifiable{
     public void setIPAddress(String address) {
         this.IPaddress = address;
     }
+
+    @Override
+    public int compareTo(Node other) {
+        return this.name.compareTo(other.getName());
+    }
+
 }

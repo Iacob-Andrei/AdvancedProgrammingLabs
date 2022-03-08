@@ -1,4 +1,4 @@
-public abstract class Node {
+public abstract class Node implements Comparable<Node>{
 
     protected String name;
 
@@ -7,4 +7,6 @@ public abstract class Node {
     abstract public void setName(String name);
 
     abstract public String toString();
+
+    abstract public int compareTo(Node node);
 }

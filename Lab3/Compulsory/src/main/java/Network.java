@@ -1,12 +1,22 @@
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 public class Network {
 
-    private List<Node> nodes = new ArrayList<>();
+    private List<Node> nodes;
+
+    Network(){
+        nodes = new ArrayList<>();
+    }
 
     public void addNode(Node node) {
-        nodes.add(node);
+        if( node != null)
+            nodes.add(node);
+    }
+
+    public void sort(){
+        Collections.sort(nodes);
     }
 
     public String toString(){

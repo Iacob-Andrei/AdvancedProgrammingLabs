@@ -2,6 +2,11 @@ public class Router extends Node implements Identifiable{
 
     private String IPaddress;
 
+    public Router(String IPaddress, String name) {
+        this.setIPAddress(IPaddress);
+        this.setName(name);
+    }
+
     @Override
     public String getName() {
         return name;
@@ -14,7 +19,7 @@ public class Router extends Node implements Identifiable{
 
     @Override
     public String toString() {
-        return IPaddress + "  " + name;
+        return name + "(Router)";
     }
 
     @Override
@@ -25,6 +30,11 @@ public class Router extends Node implements Identifiable{
     @Override
     public void setIPAddress(String address) {
         this.IPaddress = address;
+    }
+
+    @Override
+    public int compareTo(Node other) {
+        return this.name.compareTo(other.getName());
     }
 
 }

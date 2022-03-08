@@ -87,15 +87,4 @@ public class Solution {
         }
 
     }
-
-    public static void main(String[] args) {
-
-        Problem myProblem = new Problem();
-        Solution solution = new Solution(myProblem);
-
-        //solution.assignRoomToEvent();
-
-        DSatur bonus = new DSatur(myProblem);
-        bonus.degreeOfSaturation();
-    }
 }
