@@ -17,12 +17,12 @@ public class Main {
         network.addNode(node3);
     }
 
-    
+
     public static void main(String[] args) {
 
         Network network = new Network();
         addNodesToNetwork(network);
         network.sort();
-        System.out.println(network.toString());
+        System.out.println(network);
     }
 }
