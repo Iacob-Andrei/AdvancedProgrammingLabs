@@ -1,6 +1,11 @@
+package lab3.nodes;
+
+import lab3.interfaces.Identifiable;
+import lab3.nodes.Node;
+
 import java.util.Map;
 
-public class Router extends Node implements Identifiable{
+public class Router extends Node implements Identifiable {
 
     private String IPaddress;
 
@@ -51,7 +56,7 @@ public class Router extends Node implements Identifiable{
 
     @Override
     public String toString() {
-        return name + "(Router, "+ getIPAddress() +")";
+        return name + "(lab3.nodes.Router, "+ getIPAddress() +")";
     }
 
     @Override

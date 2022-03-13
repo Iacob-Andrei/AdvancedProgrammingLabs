@@ -1,3 +1,5 @@
+package lab3.nodes;
+
 import java.util.HashMap;
 import java.util.Map;
 
@@ -6,7 +8,7 @@ public abstract class Node implements Comparable<Node>{
     protected String name;
     protected Map<Node, Integer> cost = new HashMap<>();
 
-    abstract Map<Node, Integer> getCost();
+    public abstract Map<Node, Integer> getCost();
 
     abstract public void setCost(Node node, int value);
 

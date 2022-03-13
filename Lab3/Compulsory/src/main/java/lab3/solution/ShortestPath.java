@@ -1,3 +1,8 @@
+package lab3.solution;
+
+import lab3.interfaces.Identifiable;
+import lab3.nodes.Node;
+
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -58,8 +63,8 @@ public class ShortestPath {
         System.out.println("Starting from " + startNode.getName() + " we have costs:");
         for( Node node : costs.keySet() ){
             if( !node.equals(startNode) )
-                if( node instanceof Identifiable )
-                    System.out.println( "\t" + node.name + " with cost: " + costs.get(node));
+                if( node instanceof Identifiable)
+                    System.out.println( "\t" + node.getName() + " with cost: " + costs.get(node));
         }
     }
 

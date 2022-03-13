@@ -1,3 +1,10 @@
+package lab3.instance;
+
+import lab3.nodes.Computer;
+import lab3.nodes.Node;
+import lab3.nodes.Router;
+import lab3.nodes.Switch;
+
 public class Main {
 
     static void addNodesToNetwork(Network network){
@@ -46,6 +53,6 @@ public class Main {
         //System.out.println(network.getCosts());
         //network.identifiableNodes();
 
-        //ShortestPath sp = new ShortestPath(network.getNodes());
+        //lab3.solution.ShortestPath sp = new lab3.solution.ShortestPath(network.getNodes());
     }
 }

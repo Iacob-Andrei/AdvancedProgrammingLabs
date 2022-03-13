@@ -1,3 +1,8 @@
+package lab3.instance;
+
+import lab3.interfaces.Identifiable;
+import lab3.nodes.Node;
+
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
@@ -28,7 +33,7 @@ public class Network {
         List<Node> identifiableList = new ArrayList<>();
 
         for( Node node : nodes ){
-            if( node instanceof Identifiable ){
+            if( node instanceof Identifiable){
                 identifiableList.add(node);
             }
         }

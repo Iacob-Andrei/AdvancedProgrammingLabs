@@ -1,3 +1,6 @@
+package lab3.nodes;
+import lab3.interfaces.Identifiable;
+import lab3.interfaces.Storage;
 import java.util.Map;
 
 public class Computer extends Node implements Identifiable, Storage {
@@ -5,7 +8,7 @@ public class Computer extends Node implements Identifiable, Storage {
     private String IPaddress;
     private int storageCapacity;
 
-    Computer(String address, int storageCapacity, String name){
+    public Computer(String address, int storageCapacity, String name){
         this.setIPAddress(address);;
         this.setStorageCapacity(storageCapacity);
         this.setName(name);
@@ -23,7 +26,7 @@ public class Computer extends Node implements Identifiable, Storage {
 
     @Override
     public String toString() {
-        return name + "(Computer," + getStorageInMegabytes(getStorageCapacity()) + " MB, " + getIPAddress() +")";
+        return name + "(lab3.nodes.Computer," + getStorageInMegabytes(getStorageCapacity()) + " MB, " + getIPAddress() +")";
     }
 
     /**

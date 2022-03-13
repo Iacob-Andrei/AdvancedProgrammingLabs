@@ -1,6 +1,10 @@
+package lab3.nodes;
+
+import lab3.nodes.Node;
+
 import java.util.Map;
 
-public class Switch extends Node{
+public class Switch extends Node {
 
     public Switch( String name) {
         this.name = name;
@@ -48,7 +52,7 @@ public class Switch extends Node{
 
     @Override
     public String toString() {
-        return name + "(Switch)";
+        return name + "(lab3.nodes.Switch)";
     }
 
     @Override

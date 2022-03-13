@@ -1,3 +1,5 @@
+package lab3.interfaces;
+
 public interface Identifiable {
 
     String getIPAddress();
