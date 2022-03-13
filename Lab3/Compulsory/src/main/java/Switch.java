@@ -1,10 +1,25 @@
-public class Switch extends Node implements Identifiable{
+public class Switch extends Node{
 
-    private String IPaddress;
-
-    public Switch(String IPaddress, String name) {
-        this.IPaddress = IPaddress;
+    public Switch( String name) {
         this.name = name;
+    }
+
+    public void setCost(Node node, int value){
+        cost.put(node, value);
+    }
+
+    public String getCosts(){
+
+        StringBuilder sb = new StringBuilder();
+
+        for( Node node : cost.keySet()){
+
+            String name = node.getName();
+            int value = cost.get(node);
+            sb.append( this.getName() + " -- " + name + "  " + value + "\n" );
+        }
+
+        return sb.toString();
     }
 
     @Override
@@ -20,16 +35,6 @@ public class Switch extends Node implements Identifiable{
     @Override
     public String toString() {
         return name + "(Switch)";
-    }
-
-    @Override
-    public String getIPAddress() {
-        return IPaddress;
-    }
-
-    @Override
-    public void setIPAddress(String address) {
-        this.IPaddress = address;
     }
 
     @Override

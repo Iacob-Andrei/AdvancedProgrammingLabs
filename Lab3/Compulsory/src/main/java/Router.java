@@ -7,6 +7,24 @@ public class Router extends Node implements Identifiable{
         this.setName(name);
     }
 
+    public void setCost(Node node, int value){
+        cost.put(node, value);
+    }
+
+    public String getCosts(){
+
+        StringBuilder sb = new StringBuilder();
+
+        for( Node node : cost.keySet()){
+
+            String name = node.getName();
+            int value = cost.get(node);
+            sb.append( this.getName() + " -- " + name + "  " + value + "\n" );
+        }
+
+        return sb.toString();
+    }
+
     @Override
     public String getName() {
         return name;
@@ -19,7 +37,7 @@ public class Router extends Node implements Identifiable{
 
     @Override
     public String toString() {
-        return name + "(Router)";
+        return name + "(Router, "+ getIPAddress() +")";
     }
 
     @Override

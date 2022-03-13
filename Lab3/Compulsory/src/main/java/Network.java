@@ -4,11 +4,7 @@ import java.util.List;
 
 public class Network {
 
-    private List<Node> nodes;
-
-    Network(){
-        nodes = new ArrayList<>();
-    }
+    private List<Node> nodes = new ArrayList<>();
 
     public void addNode(Node node) {
         if( node != null)
@@ -30,5 +26,34 @@ public class Network {
 
         return toString.toString();
     }
+
+    public String getCosts(){
+
+        StringBuilder sb = new StringBuilder();
+
+        for( Node node : nodes ){
+            sb.append(node.getCosts());
+        }
+
+        return sb.toString();
+    }
+
+    public void identifiableNodes(){
+
+        List<Node> identifiableList = new ArrayList<>();
+
+        for( Node node : nodes ){
+            if( node instanceof Identifiable ){
+                identifiableList.add(node);
+            }
+        }
+
+        identifiableList.sort(new CustomComparator());
+
+        for( Node node : identifiableList){
+            System.out.println(node);
+        }
+    }
+
 
 }

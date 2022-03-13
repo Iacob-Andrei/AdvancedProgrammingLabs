@@ -4,10 +4,20 @@ public class Main {
 
         Node node1 = new Computer("23.43.254.12", 20, "v1");
         Node node2 = new Router("423.42.645.32", "v2");
-        Node node3 = new Switch("341.522.21.2", "v3");
-        Node node4 = new Switch("21.134.6.2", "v4");
+        Node node3 = new Switch("v3");
+        Node node4 = new Switch("v4");
         Node node5 = new Router("51.321.36.8", "v5");
         Node node6 = new Computer("43.2.98.0", 50, "v6");
+
+        node1.setCost(node2, 10);
+        node1.setCost(node3, 50);
+        node2.setCost(node3, 20);
+        node2.setCost(node4, 20);
+        node2.setCost(node5, 10);
+        node3.setCost(node4, 20);
+        node4.setCost(node5, 30);
+        node4.setCost(node6, 10);
+        node5.setCost(node6, 20);
 
         network.addNode(node5);
         network.addNode(node2);
@@ -17,12 +27,13 @@ public class Main {
         network.addNode(node3);
     }
 
-
     public static void main(String[] args) {
 
         Network network = new Network();
         addNodesToNetwork(network);
         network.sort();
-        System.out.println(network);
+        //System.out.println(network);
+        //System.out.println(network.getCosts());
+        network.identifiableNodes();
     }
 }

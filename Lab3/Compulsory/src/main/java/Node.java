@@ -1,6 +1,14 @@
+import java.util.HashMap;
+import java.util.Map;
+
 public abstract class Node implements Comparable<Node>{
 
     protected String name;
+    protected Map<Node, Integer> cost = new HashMap<>();
+
+    abstract public void setCost(Node node, int value);
+
+    abstract public String getCosts();
 
     abstract public String getName();
 
