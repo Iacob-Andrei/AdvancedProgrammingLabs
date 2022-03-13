@@ -1,0 +1,110 @@
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+public class ShortestPath {
+
+    /**
+     * constructor, also call for dijkstra algorithm
+     * in order to compute the shortest path, for every node as starting point
+     * @param nodes list of nodes
+     */
+    ShortestPath(List<Node> nodes){
+
+        for( Node node : nodes )
+            if( node instanceof Identifiable)
+                dijkstra(nodes, node);
+    }
+
+    /**
+     *
+     * @param nodes list of every node
+     * @param startNode the starting point
+     */
+    public void dijkstra(List<Node> nodes, Node startNode){
+
+        Map<Node, Integer> costs = new HashMap<>();
+        for( Node node : nodes )
+            costs.put( node, 9999999 );
+        costs.put(startNode, 0);
+
+        List<Node> visited = new ArrayList<>();
+        List<Node> unvisited = new ArrayList<>();
+
+        unvisited.add( startNode );
+
+        while( unvisited.size() != 0 ){
+
+            Node currentNode = getLowestDistance(unvisited, costs);
+            unvisited.remove(currentNode);
+
+            Map<Node, Integer> currentNodeAdjacency = currentNode.getCost();
+
+            for( Node node : currentNodeAdjacency.keySet() ){
+
+                int value = currentNodeAdjacency.get(node);
+
+                if( !visited.contains(node) ){
+
+                    costs = updateMinimumDistance( node, value, currentNode, costs );
+                    unvisited.add(node);
+                }
+            }
+            visited.add(currentNode);
+        }
+
+
+        System.out.println("Starting from " + startNode.getName() + " we have costs:");
+        for( Node node : costs.keySet() ){
+            if( !node.equals(startNode) )
+                if( node instanceof Identifiable )
+                    System.out.println( "\t" + node.name + " with cost: " + costs.get(node));
+        }
+    }
+
+
+    /**
+     * check every node from "unvisited" list
+     * and select the one that has the lowest cost
+     *
+     * @param unvisited list of the nodes that were not visited
+     * @param costs costs between the original starting node and every node
+     * @return the next node that needs to be verified
+     */
+    private Node getLowestDistance( List<Node> unvisited, Map<Node, Integer> costs ){
+
+        Node lowestDistanceNode = null;
+        int lowestDistance = 9999999;
+
+        for( Node node : unvisited ){
+
+            int distance = costs.get(node);
+            if( distance < lowestDistance ){
+                lowestDistance = distance;
+                lowestDistanceNode = node;
+            }
+        }
+
+        return lowestDistanceNode;
+    }
+
+    /**
+     * update the distance between two nodes
+     * @param node first node
+     * @param value the cost between the two nodes
+     * @param sourceNode second node
+     * @param costs the map containing all costs between the original starting point and every node
+     * @return the updated "costs" map
+     */
+    private Map<Node, Integer> updateMinimumDistance(Node node, int value, Node sourceNode,  Map<Node, Integer> costs){
+
+        int sourceDistance = costs.get(sourceNode);
+        if( sourceDistance + value < costs.get(node) ){
+            costs.put(node, sourceDistance + value);
+        }
+
+        return costs;
+    }
+
+}

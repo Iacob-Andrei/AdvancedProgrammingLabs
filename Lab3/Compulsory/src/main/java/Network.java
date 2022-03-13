@@ -6,6 +6,10 @@ public class Network {
 
     private List<Node> nodes = new ArrayList<>();
 
+    public List<Node> getNodes() {
+        return nodes;
+    }
+
     public void addNode(Node node) {
         if( node != null)
             nodes.add(node);
@@ -15,29 +19,10 @@ public class Network {
         Collections.sort(nodes);
     }
 
-    public String toString(){
-
-        StringBuilder toString = new StringBuilder();
-        for(Node node : nodes){
-
-            toString.append(node.toString());
-            toString.append("\n");
-        }
-
-        return toString.toString();
-    }
-
-    public String getCosts(){
-
-        StringBuilder sb = new StringBuilder();
-
-        for( Node node : nodes ){
-            sb.append(node.getCosts());
-        }
-
-        return sb.toString();
-    }
-
+    /**
+     * create an arraylist only for identifiable objects
+     * sorts the array using custom comparator ( sorting after their address)
+     */
     public void identifiableNodes(){
 
         List<Node> identifiableList = new ArrayList<>();
@@ -55,5 +40,30 @@ public class Network {
         }
     }
 
+    public String toString(){
+
+        StringBuilder toString = new StringBuilder();
+        for(Node node : nodes){
+
+            toString.append(node.toString());
+            toString.append("\n");
+        }
+
+        return toString.toString();
+    }
+
+    /**
+     * @return every node in "nodes" list, along with their adjacent nodes and costs
+     */
+    public String getCosts(){
+
+        StringBuilder sb = new StringBuilder();
+
+        for( Node node : nodes ){
+            sb.append(node.getCosts());
+        }
+
+        return sb.toString();
+    }
 
 }

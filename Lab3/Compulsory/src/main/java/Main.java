@@ -10,14 +10,23 @@ public class Main {
         Node node6 = new Computer("43.2.98.0", 50, "v6");
 
         node1.setCost(node2, 10);
+        node2.setCost(node1, 10);
         node1.setCost(node3, 50);
+        node3.setCost(node1, 50);
         node2.setCost(node3, 20);
+        node3.setCost(node2, 20);
         node2.setCost(node4, 20);
+        node4.setCost(node2, 20);
         node2.setCost(node5, 10);
+        node5.setCost(node2, 10);
         node3.setCost(node4, 20);
+        node4.setCost(node3, 20);
         node4.setCost(node5, 30);
+        node5.setCost(node4, 30);
         node4.setCost(node6, 10);
+        node6.setCost(node4, 10);
         node5.setCost(node6, 20);
+        node6.setCost(node5, 20);
 
         network.addNode(node5);
         network.addNode(node2);
@@ -32,8 +41,11 @@ public class Main {
         Network network = new Network();
         addNodesToNetwork(network);
         network.sort();
+
         //System.out.println(network);
         //System.out.println(network.getCosts());
-        network.identifiableNodes();
+        //network.identifiableNodes();
+
+        //ShortestPath sp = new ShortestPath(network.getNodes());
     }
 }

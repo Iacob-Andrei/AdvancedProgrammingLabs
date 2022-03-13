@@ -1,3 +1,5 @@
+import java.util.Map;
+
 public class Router extends Node implements Identifiable{
 
     private String IPaddress;
@@ -7,10 +9,22 @@ public class Router extends Node implements Identifiable{
         this.setName(name);
     }
 
+    /**
+     * add node and value to hashmap
+     * @param node to be added
+     * @param value cost
+     */
     public void setCost(Node node, int value){
         cost.put(node, value);
     }
 
+    public Map<Node, Integer> getCost(){
+        return cost;
+    }
+
+    /**
+     * @return the costs to go from current node to another node
+     */
     public String getCosts(){
 
         StringBuilder sb = new StringBuilder();
@@ -19,7 +33,7 @@ public class Router extends Node implements Identifiable{
 
             String name = node.getName();
             int value = cost.get(node);
-            sb.append( this.getName() + " -- " + name + "  " + value + "\n" );
+            sb.append(this.getName()).append(" -- ").append(name).append("  ").append(value).append("\n");
         }
 
         return sb.toString();

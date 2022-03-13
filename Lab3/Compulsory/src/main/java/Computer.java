@@ -1,3 +1,5 @@
+import java.util.Map;
+
 public class Computer extends Node implements Identifiable, Storage {
 
     private String IPaddress;
@@ -24,10 +26,18 @@ public class Computer extends Node implements Identifiable, Storage {
         return name + "(Computer," + getStorageInMegabytes(getStorageCapacity()) + " MB, " + getIPAddress() +")";
     }
 
+    /**
+     * add node and value to hashmap
+     * @param node to be added
+     * @param value cost
+     */
     public void setCost(Node node, int value){
         cost.put(node, value);
     }
 
+    /**
+     * @return the costs to go from current node to another node
+     */
     public String getCosts(){
 
         StringBuilder sb = new StringBuilder();
@@ -40,6 +50,10 @@ public class Computer extends Node implements Identifiable, Storage {
         }
 
         return sb.toString();
+    }
+
+    public Map<Node, Integer> getCost(){
+        return cost;
     }
 
     @Override
