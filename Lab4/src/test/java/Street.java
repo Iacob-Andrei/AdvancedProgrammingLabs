@@ -16,7 +16,7 @@ public class Street {
         this.name = name;
     }
 
-    public int getLength() {
+    public Integer getLength() {
         return length;
     }
 
@@ -24,4 +24,8 @@ public class Street {
         this.length = length;
     }
 
+    @Override
+    public String toString() {
+        return "Street " + name + " has length " + length;
+    }
 }
