@@ -7,4 +7,5 @@ Compulsory
 - implementat setters, getters
 - implementat toString
 - creat LinkedList pentru streets si sortat folosind lambda expression in functie de lungime
-- creat HashSet pentru intersections. 
+- creat HashSet pentru intersections
+- override equals() si hashcode() pentru Intersection
