@@ -23,5 +23,9 @@ public class Solution {
         Set<Intersection> setOfIntersections = new HashSet<>();
         Collections.addAll(setOfIntersections, intersections);
         System.out.println(setOfIntersections);
+
+        Intersection inter = new Intersection("v0");
+        setOfIntersections.add(inter);
+        System.out.println(setOfIntersections);
     }
 }
