@@ -24,4 +24,4 @@ Homework
 - implementat comparator pentru obiecte de tip nod (lexicografic dupa adresa)
 - implementat metode default pentru conversii GB in MB, KB, B
 - implementat hashmap pentru costuri pentru fiecare nod adaugat in network
-- implementat clasa Dijkstra pentru calcularea celui mai scurt drum intre toate nodurile unui graf
+- implementat clasa ShortestPath, care implementeaza algoritmul lui dijkstra, pentru calcularea celui mai scurt drum intre toate nodurile unui graf
