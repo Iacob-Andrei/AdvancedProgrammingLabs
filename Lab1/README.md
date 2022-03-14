@@ -29,4 +29,4 @@ Bonus
 - implementare metoda de start a parcurgerii DFS pentru fiecare cuvant generat
   - creare lista noua de cuvinte vizitate cu ajutorul careia se verifica lungimea circuitului in functie de lista anterioara<
   - afisare cuvinte din circuit
-  - afisare lungi
+  - afisare lungime
