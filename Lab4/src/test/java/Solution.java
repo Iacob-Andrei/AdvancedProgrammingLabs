@@ -29,4 +29,5 @@ public class Solution {
         setOfIntersections.add(inter);
         System.out.println(setOfIntersections);
     }
+    
 }
