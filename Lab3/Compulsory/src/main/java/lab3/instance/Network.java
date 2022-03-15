@@ -30,6 +30,8 @@ public class Network {
      */
     public void identifiableNodes(){
 
+        System.out.println("Printing the indentifiable nodes:");
+
         List<Node> identifiableList = new ArrayList<>();
 
         for( Node node : nodes ){

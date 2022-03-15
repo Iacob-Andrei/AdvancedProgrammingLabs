@@ -23,6 +23,18 @@ public class ShortestPath {
     }
 
     /**
+     * create a map to store the costs to go from starting point to a specified node
+     *
+     * create two lists, "visited" and "toVisit"
+     * adds the starting node to "toVisit" list and start iterating
+     *
+     * while there are accessible nodes, it picks the one with the lowest cost
+     * removes it from toVisit ( it's visited in the iteration )
+     *
+     * for every adjacent node with the selected one
+     * it updates the costs to go to the specific node and add it to "toVisit"
+     *
+     * in the end, add the current one ( the one that was iterated ) to the "visited" list
      *
      * @param nodes list of every node
      * @param startNode the starting point
@@ -35,14 +47,14 @@ public class ShortestPath {
         costs.put(startNode, 0);
 
         List<Node> visited = new ArrayList<>();
-        List<Node> unvisited = new ArrayList<>();
+        List<Node> toVisit = new ArrayList<>();
 
-        unvisited.add( startNode );
+        toVisit.add( startNode );
 
-        while( unvisited.size() != 0 ){
+        while( toVisit.size() != 0 ){
 
-            Node currentNode = getLowestDistance(unvisited, costs);
-            unvisited.remove(currentNode);
+            Node currentNode = getLowestDistance(toVisit, costs);
+            toVisit.remove(currentNode);
 
             Map<Node, Integer> currentNodeAdjacency = currentNode.getCost();
 
@@ -51,9 +63,8 @@ public class ShortestPath {
                 int value = currentNodeAdjacency.get(node);
 
                 if( !visited.contains(node) ){
-
                     costs = updateMinimumDistance( node, value, currentNode, costs );
-                    unvisited.add(node);
+                    toVisit.add(node);
                 }
             }
             visited.add(currentNode);

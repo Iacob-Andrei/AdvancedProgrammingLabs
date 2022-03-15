@@ -21,6 +21,7 @@ public class Intersection {
         return "Intersection " + name;
     }
 
+    /*
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -34,4 +35,6 @@ public class Intersection {
     public int hashCode() {
         return Objects.hash(getName());
     }
+
+     */
 }

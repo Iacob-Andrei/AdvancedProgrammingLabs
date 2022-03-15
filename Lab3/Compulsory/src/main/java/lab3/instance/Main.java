@@ -49,9 +49,9 @@ public class Main {
         addNodesToNetwork(network);
         network.sort();
 
-        //System.out.println(network);
-        //System.out.println(network.getCosts());
-        //network.identifiableNodes();
+        System.out.println("Printing the nodes frm the network:\n" + network);
+        System.out.println("Printing the edges and costs: \n" + network.getCosts());
+        network.identifiableNodes();
 
         //lab3.solution.ShortestPath sp = new lab3.solution.ShortestPath(network.getNodes());
     }
