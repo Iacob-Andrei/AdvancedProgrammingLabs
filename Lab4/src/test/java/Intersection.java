@@ -1,11 +1,8 @@
-import java.util.LinkedList;
-import java.util.List;
 import java.util.Objects;
 
 public class Intersection {
 
     private String name;
-    public List<Street> adjacentStreet = new LinkedList<>();
 
     public Intersection(String name) {
         this.name = name;
@@ -21,7 +18,7 @@ public class Intersection {
 
     @Override
     public String toString() {
-        return "Intersection " + name;
+        return name;
     }
 
     @Override
