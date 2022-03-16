@@ -1,8 +1,11 @@
+import java.util.LinkedList;
+import java.util.List;
 import java.util.Objects;
 
 public class Intersection {
 
     private String name;
+    public List<Street> adjacentStreet = new LinkedList<>();
 
     public Intersection(String name) {
         this.name = name;
@@ -21,7 +24,6 @@ public class Intersection {
         return "Intersection " + name;
     }
 
-    /*
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -35,6 +37,4 @@ public class Intersection {
     public int hashCode() {
         return Objects.hash(getName());
     }
-
-     */
 }
