@@ -15,13 +15,27 @@ public class Kruskal {
         nodes.addAll(cityMap.keySet());
     }
 
+    public Map<Intersection, Intersection> union(Intersection oldRoot, Intersection newRoot, Map<Intersection, Intersection> root){
+
+        for( Intersection intersection : root.keySet() )
+            if( root.get(intersection).equals(oldRoot) ) {
+                root.put(intersection, newRoot);
+            }
+
+        return root;
+    }
+
     public void MST(){
 
         List<Street> orderedVertexes = new LinkedList<>(vertexes);
         orderedVertexes.sort( (Street street1, Street street2) -> Integer.compare(street1.getLength(), street2.getLength() ) );
 
-        Set<Intersection> selectedNodes = new HashSet<>();
-        List<Street> selectedVertexes = new LinkedList<>();
+        Map<Intersection, Intersection> root = new HashMap<>();
+        for( Intersection intersection : nodes )
+            root.put(intersection, intersection);
+
+        int totalCost = 0;
+        System.out.println("Selected vertexes for MST: ");
 
         for( Street street : orderedVertexes ){
 
@@ -29,21 +43,14 @@ public class Kruskal {
             Intersection intersectionOne = pair.getLeft();
             Intersection intersectionTwo = pair.getRight();
 
-            if( !selectedNodes.contains(intersectionOne) || !selectedNodes.contains(intersectionTwo) ){
-                selectedNodes.add(intersectionOne);
-                selectedNodes.add(intersectionTwo);
-                selectedVertexes.add(street);
+            if( !root.get(intersectionOne).equals( root.get(intersectionTwo) ) ){
+                root = union(root.get(intersectionOne), root.get(intersectionTwo), root);
+                System.out.print( street.getName() + "("+ street.getLength() +") -> " );
+                totalCost += street.getLength();
             }
         }
 
-        int totalCost = 0;
-        System.out.println("Selected vertexes for MST: ");
-        for( Street street : selectedVertexes ){
-            System.out.print( street.getName() + "("+ street.getLength() +") -> " );
-            totalCost += street.getLength();
-        }
         System.out.println("Total cost is: " + totalCost );
-
     }
 
     private Pair<Intersection, Intersection> getNodes(Street street){
