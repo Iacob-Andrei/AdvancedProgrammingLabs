@@ -38,6 +38,7 @@ public class Solution {
         List<Intersection> intersections = generateIntersections();
 
         City city = new City(streets, intersections);
+        System.out.println("The map of the city is:\n" + city);
         //city.query(4);
 
         Kruskal kruskal = new Kruskal(city.cityMap);

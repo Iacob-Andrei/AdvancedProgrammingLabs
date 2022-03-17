@@ -5,7 +5,7 @@ public class City {
     Map<Intersection, List<Street>> cityMap = new HashMap<>();
 
     City(List<Street> streets, List<Intersection> intersections){
-        System.out.println("The streets are: " + streets + "\n\n");
+        System.out.println("\n\nThe streets are: " + streets + "\n\n");
         System.out.println("The intersections are: " + intersections + "\n\n");
 
         addToMap(intersections.get(0), Arrays.asList(streets.get(0),streets.get(1),streets.get(2)));
