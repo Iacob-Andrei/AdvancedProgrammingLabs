@@ -38,7 +38,10 @@ public class Solution {
         List<Intersection> intersections = generateIntersections();
 
         City city = new City(streets, intersections);
-        city.query(4);
+        //city.query(4);
+
+        Kruskal kruskal = new Kruskal(city.cityMap);
+        kruskal.MST();
     }
 
 }

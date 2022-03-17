@@ -42,6 +42,8 @@ public class City {
         Set<Street> streets = new HashSet<>();
         cityMap.values().forEach(streets::addAll);
 
+        System.out.println("Streets that have length >= " + length + " and intersect more than 3 streets are: \n");
+
         streets.stream()
                 .filter( street -> street.getLength() >= length )
                 .filter( street -> cityMap.values().stream().anyMatch(intersect -> intersect.contains(street) && intersect.size() >= 4) )
