@@ -21,6 +21,10 @@ public class Intersection {
         return name;
     }
 
+    /**
+     * @param o object to be compared
+     * @return -1 if the first object is grater than the second, 0 if they are equal, 1 otherwise
+     */
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -30,6 +34,9 @@ public class Intersection {
         return this.getName().equals(that.getName());
     }
 
+    /**
+     * @return the hashcode of object "Intersection", computed on "name"
+     */
     @Override
     public int hashCode() {
         return Objects.hash(getName());

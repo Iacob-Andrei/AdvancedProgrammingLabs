@@ -15,6 +15,12 @@ public class Kruskal {
         nodes.addAll(cityMap.keySet());
     }
 
+    /**
+     * @param oldRoot .
+     * @param newRoot new root for nodes that contains the old root
+     * @param root hashMap which contains the root of every node, from their specific subtree
+     * @return the updated root hashMap
+     */
     public Map<Intersection, Intersection> union(Intersection oldRoot, Intersection newRoot, Map<Intersection, Intersection> root){
 
         for( Intersection intersection : root.keySet() )
@@ -25,6 +31,13 @@ public class Kruskal {
         return root;
     }
 
+    /**
+     * using the Kruskal algorithm, compute the MST in the city using the cityMap
+     *
+     * order the vertexes by their length
+     * select every vertex, then checking if the added vertex create a cycle in the graph
+     * if not, keep the vertex
+     */
     public void MST(){
 
         List<Street> orderedVertexes = new LinkedList<>(vertexes);
@@ -53,6 +66,10 @@ public class Kruskal {
         System.out.println("Total cost is: " + totalCost );
     }
 
+    /**
+     * @param street .
+     * @return a pair representing the two adjacent vertexes that are connected with the "Street" given as parameter
+     */
     private Pair<Intersection, Intersection> getNodes(Street street){
 
         Intersection intersectionOne = null;

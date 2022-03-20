@@ -4,6 +4,11 @@ public class City {
 
     Map<Intersection, List<Street>> cityMap = new HashMap<>();
 
+    /**
+     * constructor in which the cityMap is created
+     * @param streets from the map
+     * @param intersections from the map
+     */
     City(List<Street> streets, List<Intersection> intersections){
         System.out.println("\n\nThe streets are: " + streets + "\n\n");
         System.out.println("The intersections are: " + intersections + "\n\n");
@@ -37,6 +42,10 @@ public class City {
         return toString.toString();
     }
 
+    /**
+     * query to select the streets that intersect at least 3 streets and has length grater than a specified length
+     * @param length for filter
+     */
     public void query(int length){
 
         Set<Street> streets = new HashSet<>();
