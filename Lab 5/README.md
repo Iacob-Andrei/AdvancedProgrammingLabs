@@ -1,0 +1,11 @@
+Compulsory
+-
+- creat clasele:
+  - Article
+  - Book
+  - Item
+  - Catalog
+  - Compulsory
+- implementat metodele:
+  - add pentru a adauga un Item in catalog
+  - toString pentru o reprezentare textuala a catalogului
