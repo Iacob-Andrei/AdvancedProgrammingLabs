@@ -3,6 +3,7 @@ public abstract class Item {
     String id;
     String title;
     String location;
+    String type;
 
     Item(String id, String title, String location){
         this.id = id;

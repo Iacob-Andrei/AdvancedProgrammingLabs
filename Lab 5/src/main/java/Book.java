@@ -7,6 +7,7 @@ public class Book extends Item {
         super(id,title,location);
         this.year = year;
         this.author = author;
+        type = "Book";
     }
 
     @Override
@@ -55,18 +56,8 @@ public class Book extends Item {
         this.author = author;
     }
 
-    @Override
-    public String toString() {
-        return "{\"id\":\"" +
-                this.getId() +
-                "\", \"title\":\"" +
-                this.getTitle() +
-                "\", \"location\":\"" +
-                this.getLocation() +
-                "\", \"author\":\"" +
-                this.getAuthor() +
-                "\", \"year\":\"" +
-                this.getYear() +
-                "\"};";
+    public String getType(){
+        return type;
     }
+
 }

@@ -1,0 +1,16 @@
+[
+  {
+    "id":"something321",
+    "title":"The Medieval Art",
+    "location":"d:/books/art/medievalArt.pdf",
+    "year":1882,
+    "author":"Donald Duck"
+  },
+  {
+    "id":"something412",
+    "title":"Modern Architecture",
+    "location":"d:/architecture.pdf",
+    "year":1882,
+    "author":"Mickey Mouse"
+  }
+]

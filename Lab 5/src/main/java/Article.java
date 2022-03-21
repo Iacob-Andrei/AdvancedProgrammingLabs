@@ -2,9 +2,11 @@ public class Article extends Item{
 
     private String magazine;
 
+
     public Article(String id, String title, String location, String magazine) {
         super(id,title,location);
         this.magazine = magazine;
+        type = "Article";
     }
 
     @Override
@@ -45,18 +47,8 @@ public class Article extends Item{
         this.magazine = magazine;
     }
 
-
-    @Override
-    public String toString() {
-
-        return "{\"id\":\"" +
-                this.getId() +
-                "\", \"title\":\"" +
-                this.getTitle() +
-                "\", \"location\":\"" +
-                this.getLocation() +
-                "\", \"magazine\":\"" +
-                this.getMagazine() +
-                "\"};";
+    public String getType(){
+        return type;
     }
+
 }

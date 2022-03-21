@@ -1,6 +1,8 @@
+import java.io.IOException;
+
 public class Compulsory {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
 
         Book book1 = new Book(
                 "knuth67",
@@ -21,6 +23,8 @@ public class Compulsory {
         catalog.add(book1);
         catalog.add(article1);
 
-        System.out.println(catalog);
+        //catalog.save();
+        catalog.load();
+        //System.out.println(catalog);
     }
 }
