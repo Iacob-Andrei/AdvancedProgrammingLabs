@@ -1,4 +1,7 @@
+package solution;
+import algorithm.Kruskal;
 import com.github.javafaker.Faker;
+import graph.*;
 import java.util.*;
 import java.util.stream.IntStream;
 
@@ -12,8 +15,8 @@ public class Solution {
                 .mapToObj(index -> new Street( faker.address().streetName(), (int)(Math.random() * ( 6 - 2 ) + 2) ))
                 .toList();
 
-        //List<Street> listOfStreets = new LinkedList<>(streets);
-        //listOfStreets.sort( (Street street1, Street street2) -> street1.getLength().compareTo(street2.getLength()) );
+        //List<graph.Street> listOfStreets = new LinkedList<>(streets);
+        //listOfStreets.sort( (graph.Street street1, graph.Street street2) -> street1.getLength().compareTo(street2.getLength()) );
 
         return streets;
     }
@@ -26,7 +29,7 @@ public class Solution {
                 .mapToObj(index -> new Intersection(faker.address().streetAddressNumber()))
                 .toList();
 
-        //Set<Intersection> setOfIntersections = new HashSet<>(intersections);
+        //Set<graph.Intersection> setOfIntersections = new HashSet<>(intersections);
         //System.out.println(setOfIntersections);
 
         return intersections;

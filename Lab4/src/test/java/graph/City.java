@@ -1,15 +1,16 @@
+package graph;
 import java.util.*;
 
 public class City {
 
-    Map<Intersection, List<Street>> cityMap = new HashMap<>();
+    public Map<Intersection, List<Street>> cityMap = new HashMap<>();
 
     /**
      * constructor in which the cityMap is created
      * @param streets from the map
      * @param intersections from the map
      */
-    City(List<Street> streets, List<Intersection> intersections){
+    public City(List<Street> streets, List<Intersection> intersections){
         System.out.println("\n\nThe streets are: " + streets + "\n\n");
         System.out.println("The intersections are: " + intersections + "\n\n");
 

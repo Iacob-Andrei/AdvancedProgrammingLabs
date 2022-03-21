@@ -1,3 +1,4 @@
+package graph;
 import java.util.Objects;
 
 public class Intersection {
@@ -35,7 +36,7 @@ public class Intersection {
     }
 
     /**
-     * @return the hashcode of object "Intersection", computed on "name"
+     * @return the hashcode of object "graph.Intersection", computed on "name"
      */
     @Override
     public int hashCode() {

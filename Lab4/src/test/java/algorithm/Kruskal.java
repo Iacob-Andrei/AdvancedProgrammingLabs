@@ -1,3 +1,5 @@
+package algorithm;
+import graph.*;
 import org.apache.commons.lang3.tuple.ImmutablePair;
 import org.apache.commons.lang3.tuple.Pair;
 import java.util.*;
@@ -8,7 +10,7 @@ public class Kruskal {
     Set<Street> vertexes = new HashSet<>();
     Map<Intersection, List<Street>> cityMap;
 
-    Kruskal(Map<Intersection, List<Street>> cityMap){
+    public Kruskal(Map<Intersection, List<Street>> cityMap){
 
         this.cityMap = cityMap;
         cityMap.values().forEach(vertexes::addAll);
@@ -32,7 +34,7 @@ public class Kruskal {
     }
 
     /**
-     * using the Kruskal algorithm, compute the MST in the city using the cityMap
+     * using the algorithm.Kruskal algorithm, compute the MST in the city using the cityMap
      *
      * order the vertexes by their length
      * select every vertex, then checking if the added vertex create a cycle in the graph
@@ -68,7 +70,7 @@ public class Kruskal {
 
     /**
      * @param street .
-     * @return a pair representing the two adjacent vertexes that are connected with the "Street" given as parameter
+     * @return a pair representing the two adjacent vertexes that are connected with the "graph.Street" given as parameter
      */
     private Pair<Intersection, Intersection> getNodes(Street street){
 

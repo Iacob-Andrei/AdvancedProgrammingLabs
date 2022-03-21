@@ -1,11 +1,11 @@
 Compulsory
 -
 - creat clasele:
-  - Intersection
-  - Street
-  - Solution
+  - graph.Intersection
+  - graph.Street
+  - solution.Solution
 - implementat setters, getters
 - implementat toString
 - creat LinkedList pentru streets si sortat folosind lambda expression in functie de lungime
 - creat HashSet pentru intersections
-- override equals() si hashcode() pentru Intersection
+- override equals() si hashcode() pentru graph.Intersection
