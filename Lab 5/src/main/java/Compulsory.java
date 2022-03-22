@@ -23,8 +23,8 @@ public class Compulsory {
         catalog.add(book1);
         catalog.add(article1);
 
-        //catalog.save();
-        catalog.load();
+        catalog.save();
+        //catalog.load();
         //System.out.println(catalog);
     }
 }
