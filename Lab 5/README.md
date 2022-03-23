@@ -9,3 +9,4 @@ Compulsory
 - implementat metodele:
   - add pentru a adauga un Item in catalog
   - toString pentru o reprezentare textuala a catalogului
+  - save pentru a salva informatiile din catalog intr-un fisier extern tip JSON
