@@ -1,12 +1,20 @@
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 public class Article extends Item{
 
     private String magazine;
 
 
-    public Article(String id, String title, String location, String magazine) {
+    @JsonCreator
+    public Article( @JsonProperty("id") String id,
+                    @JsonProperty("title") String title,
+                    @JsonProperty("location") String location,
+                    @JsonProperty("magazine") String magazine
+                    )
+    {
         super(id,title,location);
         this.magazine = magazine;
-        type = "Article";
     }
 
     @Override
@@ -46,9 +54,4 @@ public class Article extends Item{
     public void setMagazine(String magazine) {
         this.magazine = magazine;
     }
-
-    public String getType(){
-        return type;
-    }
-
 }

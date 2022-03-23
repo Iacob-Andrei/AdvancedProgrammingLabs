@@ -1,13 +1,21 @@
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 public class Book extends Item {
 
     private int year;
     private String author;
 
-    public Book(String id, String title, String location,  int year, String author) {
+    @JsonCreator
+    public Book(  @JsonProperty("id") String id,
+                  @JsonProperty("title") String title,
+                  @JsonProperty("location") String location,
+                  @JsonProperty("year") int year,
+                  @JsonProperty("author") String author
+                  ) {
         super(id,title,location);
         this.year = year;
         this.author = author;
-        type = "Book";
     }
 
     @Override
@@ -55,9 +63,4 @@ public class Book extends Item {
     public void setAuthor(String author) {
         this.author = author;
     }
-
-    public String getType(){
-        return type;
-    }
-
 }
