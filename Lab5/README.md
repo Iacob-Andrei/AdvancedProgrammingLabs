@@ -1,4 +1,4 @@
-solution.Compulsory
+Compulsory
 -
 - creat clasele:
   - items.Article
@@ -10,3 +10,27 @@ solution.Compulsory
   - add pentru a adauga un items.Item in catalog
   - toString pentru o reprezentare textuala a catalogului
   - save pentru a salva informatiile din catalog intr-un fisier extern tip JSON
+-
+Homework
+-
+- creat clase pentru comenzi si impartit in pachete.
+  - catalog
+    - Catalog.java
+    - CatalogUtil.java
+  - commands
+    - Command.java
+    - AddCommand.java
+    - ListCommand.java
+    - ViewCommand.java
+    - ReportCommand.java
+  - custom_exceptions
+    - CustomException.java
+  - items
+    - Item.java
+    - Book.java
+    - Article.java
+  - solution
+    - Compulsory.java
+    - Homework.java
+- folosit custom exceptions pentru a detecta posibile erori
+- JAR executabil
