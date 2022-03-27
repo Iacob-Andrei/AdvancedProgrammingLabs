@@ -20,9 +20,12 @@ public class Homework {
         AddCommand commandAdd = new AddCommand();
         ListCommand commandList = new ListCommand();
         ViewCommand commandView = new ViewCommand();
+        ReportCommand reportCommand = new ReportCommand();
 
-        //commandAdd.add(catalog, article1);
+        commandAdd.add(catalog, article1);
         //commandList.list(catalog);
         //commandView.view("target/catalog.json");
+        reportCommand.report(catalog);
+
     }
 }
