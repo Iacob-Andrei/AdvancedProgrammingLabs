@@ -1,12 +1,12 @@
-Compulsory
+solution.Compulsory
 -
 - creat clasele:
-  - Article
-  - Book
-  - Item
-  - Catalog
-  - Compulsory
+  - items.Article
+  - items.Book
+  - items.Item
+  - catalog.Catalog
+  - solution.Compulsory
 - implementat metodele:
-  - add pentru a adauga un Item in catalog
+  - add pentru a adauga un items.Item in catalog
   - toString pentru o reprezentare textuala a catalogului
   - save pentru a salva informatiile din catalog intr-un fisier extern tip JSON

@@ -1,3 +1,9 @@
+package solution;
+
+import catalog.Catalog;
+import items.Article;
+import items.Book;
+
 import java.io.IOException;
 
 public class Compulsory {
@@ -19,11 +25,11 @@ public class Compulsory {
                 "ORACLE"
         );
 
-        Catalog catalog = new Catalog("Catalog name..");
+        Catalog catalog = new Catalog("catalog.Catalog name..");
         catalog.add(book1);
         catalog.add(article1);
 
-        //CatalogUtil.save(catalog, "target/catalog.json");
-        //System.out.println(CatalogUtil.load("target/load.json"));
+        //catalog.CatalogUtil.save(catalog, "target/catalog.json");
+        //System.out.println(catalog.CatalogUtil.load("target/load.json"));
     }
 }

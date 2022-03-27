@@ -1,7 +1,11 @@
+package items;
+
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
-public class Article extends Item{
+import java.util.StringJoiner;
+
+public class Article extends Item {
 
     private String magazine;
 
@@ -53,5 +57,16 @@ public class Article extends Item{
 
     public void setMagazine(String magazine) {
         this.magazine = magazine;
+    }
+
+    @Override
+    public String toString() {
+
+        return new StringJoiner(", ", Article.class.getSimpleName() + "[", "]")
+                .add("magazine='" + magazine + "'")
+                .add("id='" + id + "'")
+                .add("title='" + title + "'")
+                .add("location='" + location + "'")
+                .toString();
     }
 }

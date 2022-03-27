@@ -1,3 +1,5 @@
+package items;
+
 import com.fasterxml.jackson.annotation.JsonSubTypes;
 import com.fasterxml.jackson.annotation.JsonTypeInfo;
 
@@ -33,4 +35,6 @@ public abstract class Item {
     public abstract String getLocation();
 
     public abstract  void setLocation(String location);
+
+    public abstract String toString();
 }

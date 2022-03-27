@@ -1,5 +1,8 @@
+package catalog;
+
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import items.Item;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -9,12 +12,12 @@ public class Catalog {
     private String name;
     private List<Item> catalog;
 
-    Catalog(String name){
+    public Catalog(String name){
         this.name = name;
         catalog = new ArrayList<>();
     }
 
-    Catalog(){
+    public Catalog(){
         catalog = new ArrayList<>();
     }
 

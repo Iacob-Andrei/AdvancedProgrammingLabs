@@ -1,5 +1,9 @@
+package items;
+
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
+
+import java.util.StringJoiner;
 
 public class Book extends Item {
 
@@ -62,5 +66,16 @@ public class Book extends Item {
 
     public void setAuthor(String author) {
         this.author = author;
+    }
+
+    @Override
+    public String toString() {
+        return new StringJoiner(", ", Book.class.getSimpleName() + "[", "]")
+                .add("year=" + year)
+                .add("author='" + author + "'")
+                .add("id='" + id + "'")
+                .add("title='" + title + "'")
+                .add("location='" + location + "'")
+                .toString();
     }
 }
