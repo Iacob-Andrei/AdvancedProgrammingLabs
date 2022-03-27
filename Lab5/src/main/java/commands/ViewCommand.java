@@ -15,6 +15,10 @@ public class ViewCommand extends Command{
         System.out.println(name + " " + description);
     }
 
+    /**
+     * open an existing file using the default app on desktop
+     * @param path to the file that needs to be opened
+     */
     public void view(String path){
 
         try{

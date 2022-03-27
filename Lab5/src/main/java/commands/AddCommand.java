@@ -15,6 +15,11 @@ public class AddCommand extends Command{
         System.out.println( name + " " + description );
     }
 
+    /**
+     * add an item to catalog
+     * @param catalog input catalog
+     * @param item input item
+     */
     public void add(Catalog catalog, Item item){
 
         try{

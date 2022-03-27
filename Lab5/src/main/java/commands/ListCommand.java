@@ -15,6 +15,10 @@ public class ListCommand extends Command{
         System.out.println( name + " " + description );
     }
 
+    /**
+     * prints the list of a catalog
+     * @param catalog input
+     */
     public void list( Catalog catalog ) {
 
         try{

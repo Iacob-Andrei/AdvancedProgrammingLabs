@@ -4,8 +4,6 @@ import catalog.Catalog;
 import custom_exceptions.CustomException;
 import freemarker.template.Configuration;
 import freemarker.template.Template;
-
-import javax.swing.text.View;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.StringWriter;
@@ -24,6 +22,11 @@ public class ReportCommand extends Command{
         System.out.println(name + " " + description);
     }
 
+    /**
+     * using a specified template for html
+     * creates a report using FreeMaker template engine
+     * @param catalog object that is reported
+     */
     public void report(Catalog catalog){
 
         try{

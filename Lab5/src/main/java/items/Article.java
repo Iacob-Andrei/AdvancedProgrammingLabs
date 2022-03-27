@@ -9,7 +9,6 @@ public class Article extends Item {
 
     private String magazine;
 
-
     @JsonCreator
     public Article( @JsonProperty("id") String id,
                     @JsonProperty("title") String title,
