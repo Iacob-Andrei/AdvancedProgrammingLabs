@@ -23,7 +23,7 @@ public class Homework {
         ReportCommand reportCommand = new ReportCommand();
 
         commandAdd.add(catalog, article1);
-        //commandList.list(catalog);
+        commandList.list(catalog);
         //commandView.view("target/catalog.json");
         reportCommand.report(catalog);
 
