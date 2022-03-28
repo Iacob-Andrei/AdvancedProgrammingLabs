@@ -18,3 +18,18 @@
 28 Mar 2022 19:54:46,430 main - TemplateLoader.findTemplateSource("template_en.ftl"): Not found
 28 Mar 2022 19:54:46,431 main - TemplateLoader.findTemplateSource("template.ftl"): Found
 28 Mar 2022 19:54:46,432 main - Loading template for "template.ftl"("en_US", UTF-8, parsed) from "E:\\Codes\\AdvancedProgrammingLabs\\Lab5\\target\\template\\template.ftl"
+28 Mar 2022 20:09:53,191 main - Couldn't find template in cache for "template.ftl"("en_US", UTF-8, parsed); will try to load it.
+28 Mar 2022 20:09:53,191 main - TemplateLoader.findTemplateSource("template_en_US.ftl"): Not found
+28 Mar 2022 20:09:53,191 main - TemplateLoader.findTemplateSource("template_en.ftl"): Not found
+28 Mar 2022 20:09:53,191 main - TemplateLoader.findTemplateSource("template.ftl"): Found
+28 Mar 2022 20:09:53,191 main - Loading template for "template.ftl"("en_US", UTF-8, parsed) from "E:\\Codes\\AdvancedProgrammingLabs\\Lab5\\target\\template\\template.ftl"
+28 Mar 2022 20:17:20,470 main - Couldn't find template in cache for "template.ftl"("en_US", UTF-8, parsed); will try to load it.
+28 Mar 2022 20:17:20,470 main - TemplateLoader.findTemplateSource("template_en_US.ftl"): Not found
+28 Mar 2022 20:17:20,470 main - TemplateLoader.findTemplateSource("template_en.ftl"): Not found
+28 Mar 2022 20:17:20,470 main - TemplateLoader.findTemplateSource("template.ftl"): Found
+28 Mar 2022 20:17:20,470 main - Loading template for "template.ftl"("en_US", UTF-8, parsed) from "E:\\Codes\\AdvancedProgrammingLabs\\Lab5\\target\\template\\template.ftl"
+28 Mar 2022 20:17:59,594 main - Couldn't find template in cache for "template.ftl"("en_US", UTF-8, parsed); will try to load it.
+28 Mar 2022 20:17:59,602 main - TemplateLoader.findTemplateSource("template_en_US.ftl"): Not found
+28 Mar 2022 20:17:59,602 main - TemplateLoader.findTemplateSource("template_en.ftl"): Not found
+28 Mar 2022 20:17:59,602 main - TemplateLoader.findTemplateSource("template.ftl"): Found
+28 Mar 2022 20:17:59,602 main - Loading template for "template.ftl"("en_US", UTF-8, parsed) from "E:\\Codes\\AdvancedProgrammingLabs\\Lab5\\target\\template\\template.ftl"
