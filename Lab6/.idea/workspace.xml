@@ -5,9 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="80b23eb4-2bca-4c6e-9dc4-5a86915437b7" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../Lab5/target/classes/solution/Homework.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab5/target/classes/solution/Homework.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/lab6/HelloApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/lab6/HelloApplication.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/lab6/hello-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/lab6/hello-view.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/game_icon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/lab6/HelloApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/lab6/HelloApplication.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/lab6/hello-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/lab6/hello-view.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/game_icon.png" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,11 +67,26 @@
       <updated>1648543941788</updated>
       <workItem from="1648543942923" duration="38000" />
       <workItem from="1648544030701" duration="1403000" />
+      <workItem from="1648545509058" duration="839000" />
+      <workItem from="1648551810958" duration="40000" />
+      <workItem from="1648552009906" duration="2000" />
+      <workItem from="1648554909120" duration="4000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

@@ -16,15 +16,15 @@
 
     <table>
         <tr>
-            <th>Title</th>
-            <th>ID</th>
-            <th>Location</th>
+            <th>Object in the catalog</th>
+            <!--<th>ID</th>
+            <th>Location</th> -->
         </tr>
         <#list catalog as item>
             <tr>
-                <td>${item.title}</td>
-                <td>${item.id}</td>
-                <td>${item.location}</td>
+                <!--<td>${item.title}</td>
+                <td>${item.id}</td>-->
+                <td>${item.toString()}</td>
             </tr>
         </#list>
     </table>

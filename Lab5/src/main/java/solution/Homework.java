@@ -33,10 +33,10 @@ public class Homework {
         commandAdd.add(catalog, article1);
         commandAdd.add(catalog, book1);
         commandList.list(catalog);
-        commandView.view("target/catalog.json");
+        //commandView.view("target/catalog.json");
 
-        //reportCommand.report(catalog);
-        //infoCommand.info("target/template/report.html");
+        reportCommand.report(catalog);
+        infoCommand.info("target/template/report.html");
     }
 
 }
