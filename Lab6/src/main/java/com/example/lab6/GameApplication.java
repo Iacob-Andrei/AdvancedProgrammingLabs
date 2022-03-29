@@ -8,12 +8,13 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
-public class HelloApplication extends Application {
+public class GameApplication extends Application {
+
     @Override
     public void start(Stage stage) throws IOException {
 
         Image icon = new Image("E:\\Codes\\AdvancedProgrammingLabs\\Lab6\\src\\main\\resources\\game-controller.png");
-        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("hello-view.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(GameApplication.class.getResource("view.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), 600, 500);
         stage.setTitle("Positional Game!");
         stage.getIcons().add(icon);
