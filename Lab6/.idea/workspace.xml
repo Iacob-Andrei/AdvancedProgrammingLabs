@@ -5,16 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="80b23eb4-2bca-4c6e-9dc4-5a86915437b7" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../Lab5/activityLog.log" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab5/activityLog.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lab5/src/main/java/commands/InfoCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab5/src/main/java/commands/InfoCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lab5/src/main/java/solution/Compulsory.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab5/src/main/java/solution/Compulsory.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/lab6/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/lab6/Controller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/lab6/GameApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/lab6/GameApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/lab6/view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/lab6/view.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/example/lab6/Controller.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/lab6/Controller.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/lab6/GameApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/lab6/GameApplication.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/lab6/view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/lab6/view.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -79,6 +72,7 @@
       <workItem from="1648722641230" duration="5000" />
       <workItem from="1648724150795" duration="1133000" />
       <workItem from="1648725637193" duration="3489000" />
+      <workItem from="1648729563195" duration="523000" />
     </task>
     <servers />
   </component>

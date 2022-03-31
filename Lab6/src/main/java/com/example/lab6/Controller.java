@@ -8,6 +8,8 @@ import javafx.scene.paint.Color;
 import javafx.scene.shape.Circle;
 import javafx.scene.shape.Line;
 
+import java.util.Random;
+
 public class Controller {
 
     @FXML private Spinner<Integer> widthSpinner;
@@ -19,7 +21,7 @@ public class Controller {
         int currentHeight = heightSpinner.getValue();
         int currentWidth = widthSpinner.getValue();
 
-        System.out.println("height: " + currentHeight + "   width: " + currentWidth);
+        //System.out.println("height: " + currentHeight + "   width: " + currentWidth);
 
         centerPane.getChildren().clear();
 
@@ -27,7 +29,6 @@ public class Controller {
         int startWidth = segmentWidth / 2;
         int segmentHeight = 500 / currentHeight;
         int startHeight = segmentHeight / 2;
-
 
         for( int line = 0 ; line < currentHeight ; line++ ){
             for( int column = 0 ; column < currentWidth ; column++ ){
@@ -43,14 +44,21 @@ public class Controller {
         for( int line = 0 ; line < currentHeight; line++ ){
             for( int column = 0 ; column < currentWidth ; column++ ){
 
+                Random random = new Random();
+
                 if( line != (currentHeight - 1) ){
                     Line linePane = new Line();
-                    linePane.setOpacity(0.5);
                     linePane.setStartX(startWidth + column * segmentWidth);
                     linePane.setStartY(startHeight + line * segmentHeight);
                     linePane.setEndX(startWidth + column * segmentWidth);
                     linePane.setEndY(startHeight + (line + 1) * segmentHeight);
-                    linePane.setFill(Color.BLACK);
+                    linePane.setFill(Color.DARKGRAY);
+                    linePane.setOpacity(0.5);
+
+                    if( (random.nextInt(5) + 1) >= 3 ){
+                        linePane.setOpacity(1);
+                        linePane.setStrokeWidth(7);
+                    }
                     centerPane.getChildren().add(linePane);
                 }
 
@@ -61,7 +69,13 @@ public class Controller {
                     columnPane.setStartY(startHeight + line * segmentHeight);
                     columnPane.setEndX(startWidth + (column + 1) * segmentWidth);
                     columnPane.setEndY(startHeight + line * segmentHeight);
-                    columnPane.setFill(Color.BLACK);
+                    columnPane.setFill(Color.DARKGRAY);
+
+                    if( (random.nextInt(5) + 1) >= 3 ){
+                        columnPane.setOpacity(1);
+                        columnPane.setStrokeWidth(7);
+                    }
+
                     centerPane.getChildren().add(columnPane);
                 }
             }
