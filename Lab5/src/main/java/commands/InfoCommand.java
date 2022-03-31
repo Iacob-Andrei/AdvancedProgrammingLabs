@@ -4,8 +4,6 @@ import org.apache.tika.metadata.Metadata;
 import org.apache.tika.parser.ParseContext;
 import org.apache.tika.parser.html.HtmlParser;
 import org.apache.tika.sax.BodyContentHandler;
-
-import java.io.File;
 import java.io.FileInputStream;
 
 public class InfoCommand extends Command {

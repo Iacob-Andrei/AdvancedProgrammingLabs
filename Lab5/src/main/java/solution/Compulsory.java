@@ -1,6 +1,6 @@
 package solution;
 
-import catalog.Catalog;
+import catalog.*;
 import items.Article;
 import items.Book;
 
@@ -30,6 +30,6 @@ public class Compulsory {
         catalog.add(article1);
 
         //catalog.CatalogUtil.save(catalog, "target/catalog.json");
-        //System.out.println(catalog.CatalogUtil.load("target/load.json"));
+        System.out.println(CatalogUtil.load("target/load.json"));
     }
 }

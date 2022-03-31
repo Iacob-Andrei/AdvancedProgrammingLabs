@@ -15,9 +15,10 @@ public class GameApplication extends Application {
 
         Image icon = new Image("E:\\Codes\\AdvancedProgrammingLabs\\Lab6\\src\\main\\resources\\game-controller.png");
         FXMLLoader fxmlLoader = new FXMLLoader(GameApplication.class.getResource("view.fxml"));
-        Scene scene = new Scene(fxmlLoader.load(), 600, 500);
+        Scene scene = new Scene(fxmlLoader.load(), 600, 620);
         stage.setTitle("Positional Game!");
         stage.getIcons().add(icon);
+        stage.setResizable(false);
         stage.setScene(scene);
         stage.show();
     }
