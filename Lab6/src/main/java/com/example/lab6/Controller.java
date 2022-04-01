@@ -1,13 +1,11 @@
 package com.example.lab6;
 
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Spinner;
 import javafx.scene.layout.Pane;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Circle;
 import javafx.scene.shape.Line;
-
 import java.util.Random;
 
 public class Controller {
@@ -16,14 +14,11 @@ public class Controller {
     @FXML private Spinner<Integer> heightSpinner;
     @FXML private Pane centerPane;
 
-    public void create(ActionEvent e){
+    public void savePNG(){
 
-        int currentHeight = heightSpinner.getValue();
-        int currentWidth = widthSpinner.getValue();
+    }
 
-        //System.out.println("height: " + currentHeight + "   width: " + currentWidth);
-
-        centerPane.getChildren().clear();
+    public void createCircles(int currentHeight, int currentWidth){
 
         int segmentWidth = 600 / currentWidth;
         int startWidth = segmentWidth / 2;
@@ -40,6 +35,14 @@ public class Controller {
                 centerPane.getChildren().add(circle);
             }
         }
+    }
+
+    public void createLines(int currentHeight, int currentWidth){
+
+        int segmentWidth = 600 / currentWidth;
+        int startWidth = segmentWidth / 2;
+        int segmentHeight = 500 / currentHeight;
+        int startHeight = segmentHeight / 2;
 
         for( int line = 0 ; line < currentHeight; line++ ){
             for( int column = 0 ; column < currentWidth ; column++ ){
@@ -80,5 +83,16 @@ public class Controller {
                 }
             }
         }
+    }
+
+    public void create(){
+
+        int currentHeight = heightSpinner.getValue();
+        int currentWidth = widthSpinner.getValue();
+
+        centerPane.getChildren().clear();
+
+        createCircles(currentHeight, currentWidth);
+        createLines(currentHeight, currentWidth);
     }
 }
