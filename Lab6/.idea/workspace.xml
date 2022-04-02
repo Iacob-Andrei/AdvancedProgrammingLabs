@@ -4,16 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="80b23eb4-2bca-4c6e-9dc4-5a86915437b7" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_media_jai_com_springsource_javax_media_jai_core_1_1_3.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab6.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Lab6.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/lab6/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/lab6/Controller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/lab6/view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/lab6/view.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/lab6/Controller.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/lab6/Controller.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/lab6/view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/lab6/view.fxml" afterDir="false" />
-    </list>
+    <list default="true" id="80b23eb4-2bca-4c6e-9dc4-5a86915437b7" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -82,6 +73,7 @@
       <workItem from="1648746649595" duration="12000" />
       <workItem from="1648803005617" duration="1272000" />
       <workItem from="1648804332039" duration="1072000" />
+      <workItem from="1648895709892" duration="40000" />
     </task>
     <servers />
   </component>
