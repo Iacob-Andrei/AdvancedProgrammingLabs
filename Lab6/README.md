@@ -6,7 +6,7 @@ Compulsory
 - creat control panel
 - creat configuration panel
 - creat canvas ( drawing panel )
--
+
 Homework
 -
 - initializat jocul prin generarea random a unor 'stick' uri
