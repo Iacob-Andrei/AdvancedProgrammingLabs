@@ -10,13 +10,10 @@ import java.util.Random;
 
 public class Controller {
 
+    static int turn = 0;
     @FXML private Spinner<Integer> widthSpinner;
     @FXML private Spinner<Integer> heightSpinner;
     @FXML private Pane centerPane;
-
-    public void savePNG(){
-
-    }
 
     public void createCircles(int currentHeight, int currentWidth){
 
@@ -28,6 +25,18 @@ public class Controller {
         for( int line = 0 ; line < currentHeight ; line++ ){
             for( int column = 0 ; column < currentWidth ; column++ ){
                 Circle circle = new Circle(12);
+                circle.setOnMouseClicked(event -> {
+                    Color currentColor = (Color)circle.getFill();
+                    if( Color.WHITE.equals(currentColor) ){
+                        if( turn == 0 ){
+                            circle.setFill(Color.RED);
+                            turn = 1;
+                        }else{
+                            circle.setFill(Color.BLUE);
+                            turn = 0;
+                        }
+                    }
+                });
                 circle.setCenterX( startWidth + column * segmentWidth );
                 circle.setCenterY( startHeight + line * segmentHeight );
                 circle.setStroke(Color.BLACK);
@@ -92,7 +101,7 @@ public class Controller {
 
         centerPane.getChildren().clear();
 
-        createCircles(currentHeight, currentWidth);
         createLines(currentHeight, currentWidth);
+        createCircles(currentHeight, currentWidth);
     }
 }
