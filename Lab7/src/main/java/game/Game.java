@@ -7,23 +7,42 @@ import java.util.List;
 
 public class Game {
 
-    private final Bag bag = new Bag();
-    private final Board board = new Board();
+    private final Bag bag = new Bag(this);
+    private final Board board = new Board(this);
     private final Dictionary dictionary = new Dictionary();
     private final List<Player> players = new ArrayList<>();
+    private boolean gameIsRunning = false;
 
     public void addPlayer(Player newPlayer){
         players.add(newPlayer);
     }
 
-    // TO DO
-    public void play(){
-
+    public boolean isGameIsRunning() {
+        return gameIsRunning;
     }
 
-    public static void main(String[] args) {
+    public void setGameIsRunning(boolean gameIsRunning) {
+        this.gameIsRunning = gameIsRunning;
+    }
 
-        Game game = new Game();
+    public Bag getBag() {
+        return bag;
+    }
 
+    public Board getBoard() {
+        return board;
+    }
+
+    public void play(){
+
+        gameIsRunning = true;
+        List<Thread> threadList = new ArrayList<>();
+
+        for( Player player : players ){
+            threadList.add(new Thread(player));
+        }
+
+        for( Thread thread : threadList )
+            thread.start();
     }
 }
