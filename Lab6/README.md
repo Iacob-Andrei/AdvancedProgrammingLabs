@@ -10,3 +10,5 @@ Compulsory
 Homework
 -
 - initializat jocul prin generarea random a unor 'stick' uri
+- implementat colorarea nodurilor 
+- salvarea pane-ului central ca imagine PNG
