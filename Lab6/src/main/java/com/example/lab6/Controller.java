@@ -1,12 +1,19 @@
 package com.example.lab6;
 
 import javafx.fxml.FXML;
+import javafx.scene.SnapshotParameters;
 import javafx.scene.control.Spinner;
+import javafx.scene.image.WritableImage;
 import javafx.scene.layout.Pane;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Circle;
 import javafx.scene.shape.Line;
+import javafx.embed.swing.SwingFXUtils;
+import javax.imageio.ImageIO;
+import java.io.File;
+import java.io.IOException;
 import java.util.Random;
+
 
 public class Controller {
 
@@ -14,6 +21,19 @@ public class Controller {
     @FXML private Spinner<Integer> widthSpinner;
     @FXML private Spinner<Integer> heightSpinner;
     @FXML private Pane centerPane;
+
+    public void savePNG(){
+
+        WritableImage image = centerPane.snapshot(new SnapshotParameters(), null);
+
+        File file = new File("E:\\Codes\\AdvancedProgrammingLabs\\Lab6\\src\\main\\resources\\save.png");
+
+        try {
+            ImageIO.write(SwingFXUtils.fromFXImage(image, null), "png", file);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
 
     public void createCircles(int currentHeight, int currentWidth){
 
