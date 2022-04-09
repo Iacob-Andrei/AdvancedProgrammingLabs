@@ -17,7 +17,7 @@ public class Game {
         players.add(newPlayer);
     }
 
-    public boolean isGameIsRunning() {
+    public boolean gameIsRunning() {
         return gameIsRunning;
     }
 

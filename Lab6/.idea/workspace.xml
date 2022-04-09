@@ -6,14 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="80b23eb4-2bca-4c6e-9dc4-5a86915437b7" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/lab6/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/lab6/Controller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/lab6/GameApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/lab6/GameApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/lab6/view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/lab6/view.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/lab6/Controller.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/lab6/Controller.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/lab6/view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/lab6/view.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/module-info.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/module-info.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab7/src/main/java/game/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab7/src/main/java/game/Game.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -98,6 +91,9 @@
       <workItem from="1649145461671" duration="80000" />
       <workItem from="1649145886826" duration="229000" />
       <workItem from="1649154618085" duration="2151000" />
+      <workItem from="1649162925006" duration="6000" />
+      <workItem from="1649164129726" duration="315000" />
+      <workItem from="1649501850774" duration="8000" />
     </task>
     <servers />
   </component>
