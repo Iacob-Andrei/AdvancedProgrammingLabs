@@ -14,7 +14,15 @@ public class Game {
     private boolean gameIsRunning = false;
 
     public void addPlayer(Player newPlayer){
-        players.add(newPlayer);
+
+        try {
+            if( newPlayer == null )
+                throw new Exception("new player null!");
+            players.add(newPlayer);
+        }
+        catch (Exception e){
+            e.printStackTrace();
+        }
     }
 
     public boolean gameIsRunning() {

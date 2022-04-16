@@ -12,8 +12,20 @@ public class Player implements Runnable{
     private boolean running;
 
     public Player(String name, Game game){
-        this.name = name;
-        this.game = game;
+
+        try{
+            if( name == null )
+                throw new Exception("name is null!");
+            if( game == null )
+                throw new Exception("game is null!");
+
+            this.name = name;
+            this.game = game;
+
+        }
+        catch(Exception e){
+            e.printStackTrace();
+        }
     }
 
     public String getName() {

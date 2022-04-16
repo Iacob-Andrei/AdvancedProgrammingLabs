@@ -10,9 +10,10 @@ public class Bag {
     private Game game;
 
     public Bag(Game game){
+
         this.game = game;
         bag = new HashMap<>();
-        for( char character = 'a' ; character <= 'z' ; character++ ){
+        for (char character = 'a'; character <= 'z'; character++) {
             bag.put(new Tile(character), 10);
         }
     }
