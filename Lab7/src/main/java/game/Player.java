@@ -44,16 +44,23 @@ public class Player implements Runnable{
         System.out.println("[" + getName() + "]" + " Tiles available " + availableTiles );
         String word = readWord();
 
-        while( word.equals(" ") || word.equals("") ){
-            availableTiles = game.getBag().extractTiles(7);
+        while( !game.getDictionary().containsTiles(word, availableTiles) ){
 
-            if (availableTiles.isEmpty()) {
-                game.setGameIsRunning(false);
-                return false;
+            System.out.println("[GAME] Retype another word!");
+            word = readWord();
+
+            if( word.trim().equals("") ){
+                availableTiles = game.getBag().extractTiles(7);
+                System.out.println("[" + getName() + "]" + " gets new tiles! " + availableTiles + "\n");
+
+                if (availableTiles.isEmpty()) {
+                    game.setGameIsRunning(false);
+                    return false;
+                }
+
+                return true;
             }
         }
-
-        //TO DO - CHECK IF LETTERS EXISTS
 
         game.getBoard().addWord(this, word);
         try {
@@ -71,6 +78,6 @@ public class Player implements Runnable{
         synchronized (game){
             submitWord();
         }
-
     }
+
 }

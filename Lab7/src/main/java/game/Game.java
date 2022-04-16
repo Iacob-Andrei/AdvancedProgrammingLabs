@@ -33,16 +33,13 @@ public class Game {
         return board;
     }
 
+    public Dictionary getDictionary(){ return dictionary; }
+
     public void play(){
 
         gameIsRunning = true;
-        List<Thread> threadList = new ArrayList<>();
-
         for( Player player : players ){
-            threadList.add(new Thread(player));
+            new Thread(player).start();
         }
-
-        for( Thread thread : threadList )
-            thread.start();
     }
 }
