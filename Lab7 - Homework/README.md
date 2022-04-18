@@ -1,0 +1,12 @@
+Compulsory
+-
+- creat clasele si pachetele:
+  - elements
+    - Board
+    - Tile
+    - Bag
+    - Dictionary
+  - game
+    - Game
+    - Player
+- asignat random puncte (1-10) pentru fiecare litera
