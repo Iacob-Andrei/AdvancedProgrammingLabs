@@ -9,6 +9,11 @@ public class Bag {
     private Map<Tile, Integer> bag;
     private Game game;
 
+    /**
+     * for every tile adds the correct amount into the bag
+     * every tile has a specific amount of points
+     * @param game game
+     */
     public Bag(Game game){
 
         this.game = game;
@@ -70,6 +75,13 @@ public class Bag {
         }
     }
 
+    /**
+     * randomly select tiles from the bag
+     * tiles will be returned to the player
+     * if there are not enough tiles, the game will end
+     * @param number of tiles that needs to be extracted
+     * @return list of new tiles
+     */
     public synchronized List<Tile> extractTiles(int number){
 
         List<Tile> extracted = new ArrayList<>();
@@ -94,6 +106,11 @@ public class Bag {
         return extracted;
     }
 
+    /**
+     * put back the tiles that were discarded by a player into the bag
+     * a player can discard tiles when he/she doesn't commit any word
+     * @param discardedTiles list of tiles
+     */
     public void discardTiles(List<Tile> discardedTiles){
 
         for( Tile tile : discardedTiles ){

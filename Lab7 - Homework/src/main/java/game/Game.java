@@ -42,7 +42,8 @@ public class Game {
         return board;
     }
 
-    public Dictionary getDictionary(){ return dictionary; }
+    public Dictionary getDictionary(){
+        return dictionary; }
 
     public List<Player> getPlayers() {
         return players;

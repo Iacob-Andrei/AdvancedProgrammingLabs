@@ -17,6 +17,11 @@ public class Board {
         return words;
     }
 
+    /**
+     * adds to the table the word that was added and prints the player and his current score
+     * @param player that submitted a word
+     * @param word the word that was submitted
+     */
     public synchronized void addWord(Player player, String word) {
         words.add(word);
         System.out.println("\n" + player.getName() + " submitted the word: " + word + ". Current points: " + player.getScore());
