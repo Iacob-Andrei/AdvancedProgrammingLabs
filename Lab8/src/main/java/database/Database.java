@@ -1,3 +1,5 @@
+package database;
+
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
@@ -8,6 +10,8 @@ public class Database {
     private static final String USER = "admin";
     private static final String PASSWORD = "6kT4Yi1S7AtqErWTxZyD";
     private static Connection connection = null;
+
+    private Database(){}
 
     public static Connection getConnection(){
         return connection;
@@ -24,6 +28,7 @@ public class Database {
     public static void createConnection(){
         try{
             connection = DriverManager.getConnection(URL, USER, PASSWORD);
+            connection.setAutoCommit(false);
         } catch (SQLException e) {
             e.printStackTrace();
         }
