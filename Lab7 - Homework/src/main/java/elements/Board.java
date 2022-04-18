@@ -13,17 +13,13 @@ public class Board {
         this.game = game;
     }
 
-    public Game getGame() {
-        return game;
-    }
-
     public List<String> getWords() {
         return words;
     }
 
     public synchronized void addWord(Player player, String word) {
         words.add(word);
-        System.out.println("\n" + player.getName() + " submitted the word: " + word + "\n");
+        System.out.println("\n" + player.getName() + " submitted the word: " + word + ". Current points: " + player.getScore());
     }
 
     @Override

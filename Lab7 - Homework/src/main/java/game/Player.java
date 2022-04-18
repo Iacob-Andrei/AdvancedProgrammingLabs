@@ -9,7 +9,7 @@ public class Player implements Runnable{
     private List<Tile> availableTiles;
     private String name;
     private Game game;
-    private boolean running;
+    private int score;
 
     public Player(String name, Game game){
 
@@ -21,7 +21,7 @@ public class Player implements Runnable{
 
             this.name = name;
             this.game = game;
-
+            this.score = 0;
         }
         catch(Exception e){
             e.printStackTrace();
@@ -32,16 +32,8 @@ public class Player implements Runnable{
         return name;
     }
 
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public Game getGame() {
-        return game;
-    }
-
-    public void setGame(Game game) {
-        this.game = game;
+    public int getScore() {
+        return score;
     }
 
     public String readWord(){
@@ -51,44 +43,66 @@ public class Player implements Runnable{
         return scanner.nextLine();
     }
 
-    public boolean submitWord(){
+    public void submitWord(){
 
         System.out.println("[" + getName() + "]" + " Tiles available " + availableTiles );
-        String word = readWord();
+        String word = readWord().toUpperCase();
 
-        while( !game.getDictionary().containsTiles(word, availableTiles) ){
+        if( game.getDictionary().isWord(word) && game.getDictionary().containsTiles(word, availableTiles) ){
 
-            System.out.println("[GAME] Retype another word!");
-            word = readWord();
+            score += game.getDictionary().computePoints(word);
+            game.getBoard().addWord(this, word);
 
-            if( word.trim().equals("") ){
-                availableTiles = game.getBag().extractTiles(7);
-                System.out.println("[" + getName() + "]" + " gets new tiles! " + availableTiles + "\n");
+            game.getDictionary().throwTiles(word, availableTiles);
 
-                if (availableTiles.isEmpty()) {
-                    game.setGameIsRunning(false);
-                    return false;
-                }
-
-                return true;
-            }
+            List<Tile> newTiles = game.getBag().extractTiles(word.length());
+            if( newTiles == null )
+                return;
+            availableTiles.addAll( newTiles );
         }
 
-        game.getBoard().addWord(this, word);
+        if( word.equals(" ") || word.equals("") ){
+            game.getBag().discardTiles(availableTiles);
+            availableTiles = game.getBag().extractTiles(7);
+        }
+
         try {
-            Thread.sleep(50);
+            Thread.sleep(100);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
-        return true;
+    }
+
+    public void turn(int indexPlayer){
+
+        synchronized (game){
+            game.notifyAll();
+
+            while( game.getCurrentTurn() != indexPlayer ){
+                try{
+                    game.wait();
+                } catch (InterruptedException e){
+                    e.printStackTrace();
+                }
+            }
+        }
     }
 
     @Override
     public void run(){
 
         availableTiles = game.getBag().extractTiles(7);
-        synchronized (game){
+        int indexPlayer = game.getPlayers().indexOf(this);
+
+        while( true ){
+
+            turn(indexPlayer);
+            if( !game.gameIsRunning() )
+                break;
+
             submitWord();
+            int currentTurn = ( game.getCurrentTurn() + 1 ) % game.getPlayers().size();
+            game.setCurrentTurn(currentTurn);
         }
     }
 

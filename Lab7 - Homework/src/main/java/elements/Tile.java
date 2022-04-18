@@ -7,10 +7,10 @@ public class Tile {
     private final char letter;
     private final int points;
 
-    public Tile(char letter){
+    public Tile(char letter, int points){
 
         this.letter = letter;
-        this.points = (int)((Math.random() * (11 - 1 )) + 1);
+        this.points = points;
     }
 
     public char getLetter() {

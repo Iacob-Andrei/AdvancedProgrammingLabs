@@ -9,9 +9,10 @@ public class Game {
 
     private final Bag bag = new Bag(this);
     private final Board board = new Board(this);
-    private final Dictionary dictionary = new Dictionary();
+    private final Dictionary dictionary = new Dictionary("E:\\Codes\\AdvancedProgrammingLabs\\Lab7 - Homework\\src\\main\\resources\\dictionary.txt");
     private final List<Player> players = new ArrayList<>();
     private boolean gameIsRunning = false;
+    private int currentTurn = 0;
 
     public void addPlayer(Player newPlayer){
 
@@ -42,6 +43,18 @@ public class Game {
     }
 
     public Dictionary getDictionary(){ return dictionary; }
+
+    public List<Player> getPlayers() {
+        return players;
+    }
+
+    public int getCurrentTurn() {
+        return currentTurn;
+    }
+
+    public void setCurrentTurn(int currentTurn) {
+        this.currentTurn = currentTurn;
+    }
 
     public void play(){
 
