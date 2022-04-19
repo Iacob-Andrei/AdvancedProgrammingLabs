@@ -13,4 +13,7 @@ Compulsory
     - Player
   - solution
     - Homework
-
+- creat thread pentru fiecare player
+- folosit aspell pentru crearea dictionarului, salvarea fiecarui cuvant intr-un HashTable, salvat alaturi de nr de puncte
+- implementat logica jocului
+- implementat timekeeper
