@@ -1,0 +1,13 @@
+Compulsory
+-
+- creat clasele si pachetele:
+  - database
+    - Database
+  - dao
+    - ContinentDAO
+    - CountriDAO
+  - solution
+    - Compulsory
+- creat conexiunea la un server MySQL
+- creat tabelele countries si continent
+- efectuat comenzi DML precum cautarea unui continent dupa nume/id, unei tari dupa nume/id
