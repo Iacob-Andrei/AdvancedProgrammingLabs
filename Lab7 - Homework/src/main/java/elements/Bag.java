@@ -8,6 +8,7 @@ public class Bag {
 
     private Map<Tile, Integer> bag;
     private Game game;
+    private int bagSize = 0;
 
     /**
      * for every tile adds the correct amount into the bag
@@ -16,6 +17,7 @@ public class Bag {
      */
     public Bag(Game game){
 
+        bagSize = 98;
         this.game = game;
         bag = new HashMap<>();
         for (char character = 'A'; character <= 'Z'; character++) {
@@ -88,7 +90,7 @@ public class Bag {
         Random generator = new Random();
 
         for( int index = 0 ; index < number ; index++ ){
-            if( bag.isEmpty() ) {
+            if( bagSize ==0 ) {
                 
                 extracted = null;
                 game.setGameIsRunning(false);
@@ -101,6 +103,7 @@ public class Bag {
             extracted.add(tile);
             int nrOfTiles = bag.get(tile) - 1;
             bag.put(tile, nrOfTiles);
+            bagSize--;
         }
 
         return extracted;
@@ -115,6 +118,7 @@ public class Bag {
 
         for( Tile tile : discardedTiles ){
             bag.put(tile, bag.get(tile) + 1);
+            bagSize++;
         }
     }
 

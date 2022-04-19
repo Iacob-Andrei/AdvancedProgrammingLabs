@@ -1,6 +1,7 @@
 package solution;
 
 import dao.ContinentDAO;
+import dao.CountryDAO;
 import database.Database;
 
 public class Compulsory {
@@ -12,10 +13,17 @@ public class Compulsory {
 
             ContinentDAO.create("Europe");
 
-            System.out.println("ID for Europe is: " + ContinentDAO.findByName("Europe"));
-            System.out.println("Continent with ID = 1 is: " + ContinentDAO.findById(1));
+            //System.out.println("ID for Europe is: " + ContinentDAO.findByName("Europe"));
+            //System.out.println("Continent with ID = 1 is: " + ContinentDAO.findById(1));
+
+            CountryDAO.create("Romania", "40", ContinentDAO.findByName("Europe") );
+            CountryDAO.create("Ukraine", "380", ContinentDAO.findByName("Europe") );
+            CountryDAO.create("Italy", "39", ContinentDAO.findByName("Europe") );
+
+            ContinentDAO.countriesInContinent( ContinentDAO.findByName("Europe") );
 
             Database.closeConnection();
+
         } catch (Exception e){
             e.printStackTrace();
         }
