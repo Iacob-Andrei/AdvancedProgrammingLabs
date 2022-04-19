@@ -1,6 +1,7 @@
 package game;
 
 import elements.*;
+import game.timekeeper.TimeKeeper;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -13,6 +14,7 @@ public class Game {
     private final List<Player> players = new ArrayList<>();
     private boolean gameIsRunning = false;
     private int currentTurn = 0;
+    private TimeKeeper timeKeeper = new TimeKeeper(this);
 
     public void addPlayer(Player newPlayer){
 
@@ -24,6 +26,10 @@ public class Game {
         catch (Exception e){
             e.printStackTrace();
         }
+    }
+
+    public TimeKeeper getTimeKeeper() {
+        return timeKeeper;
     }
 
     public boolean gameIsRunning() {
@@ -58,6 +64,8 @@ public class Game {
     }
 
     public void play(){
+
+        new Thread(timeKeeper).start();
 
         gameIsRunning = true;
         for( Player player : players ){

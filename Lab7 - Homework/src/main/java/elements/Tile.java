@@ -23,9 +23,9 @@ public class Tile {
 
     @Override
     public String toString() {
-        return new StringJoiner(", ", "[", "]")
-                .add("letter=" + letter)
-                .add("points=" + points)
+        return new StringJoiner(", ", "(", ")")
+                .add("" + letter)
+                .add(points + "p")
                 .toString();
     }
 
