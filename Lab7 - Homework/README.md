@@ -7,6 +7,10 @@ Compulsory
     - Bag
     - Dictionary
   - game
+    - timekeeper
+      -TimeKeeper
     - Game
     - Player
-- asignat random puncte (1-10) pentru fiecare litera
+  - solution
+    - Homework
+
