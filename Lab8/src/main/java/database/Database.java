@@ -25,7 +25,7 @@ public class Database {
      */
     public static void closeConnection(){
         try {
-            //connection.commit();
+            connection.commit();
             connection.close();
         }catch (SQLException e){
             e.printStackTrace();

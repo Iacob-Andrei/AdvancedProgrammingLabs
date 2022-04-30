@@ -3,7 +3,7 @@ package dao;
 import database.Database;
 import java.sql.*;
 
-public class ContinentDAO {
+public class ContinentDAO extends DAO{
 
     /**
      * insert a row into the 'continents' table
@@ -41,7 +41,7 @@ public class ContinentDAO {
      * @param name for query
      * @return select the id of the continent that has the specified name
      */
-    static public int findByName(String name) throws SQLException {
+    public int findByName(String name) throws SQLException {
 
         Connection conn = Database.getConnection();
         Statement statement = conn.createStatement();
@@ -55,7 +55,7 @@ public class ContinentDAO {
      * @param id for query
      * @return select the name of the continent that has the specified id
      */
-    static public String findById(int id) throws SQLException {
+    public String findById(int id) throws SQLException {
 
         Connection conn = Database.getConnection();
         Statement statement = conn.createStatement();
