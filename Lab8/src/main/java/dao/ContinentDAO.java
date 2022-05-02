@@ -1,6 +1,8 @@
 package dao;
 
 import database.Database;
+import model.Continent;
+
 import java.sql.*;
 
 public class ContinentDAO extends DAO{
@@ -41,34 +43,33 @@ public class ContinentDAO extends DAO{
      * @param name for query
      * @return select the id of the continent that has the specified name
      */
-    public int findByName(String name) throws SQLException {
+    public Continent findByName(String name) throws SQLException {
 
         Connection conn = Database.getConnection();
         Statement statement = conn.createStatement();
 
         ResultSet result = statement.executeQuery("SELECT id FROM continents WHERE name = '" + name + "'");
 
-        return result.next() ? result.getInt(1) : -1;
+        return result.next() ? new Continent(result.getInt("id"), result.getString("name")) : null;
     }
 
     /**
      * @param id for query
      * @return select the name of the continent that has the specified id
      */
-    public String findById(int id) throws SQLException {
+    public Continent findById(int id) throws SQLException {
 
         Connection conn = Database.getConnection();
         Statement statement = conn.createStatement();
 
         ResultSet result = statement.executeQuery("SELECT name FROM continents WHERE id = " + id);
 
-        return result.next() ? result.getString(1) : null;
+        return result.next() ? new Continent(result.getInt("id"), result.getString("name")) : null;
     }
 
-    /**
+    /*
      * prints all the countries from countries table that are in the specified continent
      * @param id of the continent
-     */
     static public void countriesInContinent(int id) throws SQLException {
 
         Connection conn = Database.getConnection();
@@ -83,4 +84,5 @@ public class ContinentDAO extends DAO{
             System.out.println(name + " has code " + code);
         }
     }
+    */
 }

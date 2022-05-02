@@ -1,6 +1,8 @@
 package dao;
 
 import database.Database;
+import model.Country;
+
 import java.sql.*;
 
 public class CountryDAO extends DAO{
@@ -9,7 +11,7 @@ public class CountryDAO extends DAO{
      * insert a row into the 'country' table
      * @param name of the country
      */
-    static public void create(String name, String code, int continent){
+    static public void create(String name, String code, String continent){
 
         Connection conn = Database.getConnection();
         try{
@@ -20,7 +22,7 @@ public class CountryDAO extends DAO{
             statement.setInt(1, id);
             statement.setString(2, name);
             statement.setString(3, code);
-            statement.setInt(4, continent);
+            statement.setString(4, continent);
 
             statement.executeUpdate();
             statement.close();
@@ -45,27 +47,27 @@ public class CountryDAO extends DAO{
      * @param name for query
      * @return select the id of the country that has the specified name
      */
-    public int findByName(String name) throws SQLException {
+    public Country findByName(String name) throws SQLException {
 
         Connection conn = Database.getConnection();
         Statement statement = conn.createStatement();
 
-        ResultSet result = statement.executeQuery("SELECT id FROM countries WHERE name = '" + name + "'");
+        ResultSet result = statement.executeQuery("SELECT * FROM countries WHERE name = '" + name + "'");
 
-        return result.next() ? result.getInt(1) : -1;
+        return result.next() ? new Country( result.getInt("id"), result.getString("name"), result.getString("code"), result.getString("continent") ) : null;
     }
 
     /**
      * @param id for query
      * @return select the name of the country that has the specified id
      */
-    public String findById(int id) throws SQLException {
+    public Country findById(int id) throws SQLException {
 
         Connection conn = Database.getConnection();
         Statement statement = conn.createStatement();
 
-        ResultSet result = statement.executeQuery("SELECT name FROM countries WHERE id = " + id);
+        ResultSet result = statement.executeQuery("SELECT * FROM countries WHERE id = " + id);
 
-        return result.next() ? result.getString(1) : null;
+        return result.next() ? new Country( result.getInt("id"), result.getString("name"), result.getString("code"), result.getString("continent") ) : null;
     }
 }

@@ -2,7 +2,7 @@ package model;
 
 public class Continent extends Table{
 
-    Continent(int id, String name){
+    public Continent(int id, String name){
         this.id = id;
         this.name = name;
     }
@@ -14,6 +14,11 @@ public class Continent extends Table{
 
     @Override
     public String getName() {
+        return name;
+    }
+
+    @Override
+    public String toString() {
         return name;
     }
 }

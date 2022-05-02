@@ -20,11 +20,10 @@ public class Compulsory {
             //System.out.println("ID for Europe is: " + ContinentDAO.findByName("Europe"));
             //System.out.println("Continent with ID = 1 is: " + ContinentDAO.findById(1));
 
-            CountryDAO.create("Romania", "40", continentDAO.findByName("Europe") );
-            CountryDAO.create("Ukraine", "380", continentDAO.findByName("Europe") );
-            CountryDAO.create("Italy", "39", continentDAO.findByName("Europe") );
+            CountryDAO.create("Romania", "40", "Europe" );
+            CountryDAO.create("Ukraine", "380", "Europe" );
+            CountryDAO.create("Italy", "39", "Europe" );
 
-            ContinentDAO.countriesInContinent( continentDAO.findByName("Europe") );
 
             Database.closeConnection();
 
