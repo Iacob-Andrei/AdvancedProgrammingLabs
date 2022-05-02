@@ -1,13 +1,26 @@
-Compulsory
+Compulsory & Homework
 -
 - creat clasele si pachetele:
   - database
     - Database
   - dao
     - ContinentDAO
-    - CountriDAO
+    - CountriesDAO
+    - CitiesDAO
+  - importData
+    - ImportCountries
+  - model
+    - Table
+    - City
+    - Country
+    - Continent
   - solution
     - Compulsory
+    - Homework
+
 - creat conexiunea la un server MySQL
 - creat tabelele countries si continent
 - efectuat comenzi DML precum cautarea unui continent dupa nume/id, unei tari dupa nume/id
+- creat model OOP pentru datele din aplicatie
+- importat date despre orase si tari din concav.csv
+- creat metoda pentru calculat distanta dintre doua orase, in functie de latitudine si longitudine
