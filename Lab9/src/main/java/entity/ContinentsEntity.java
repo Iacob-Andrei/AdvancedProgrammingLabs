@@ -3,9 +3,9 @@ package entity;
 import javax.persistence.*;
 
 @Entity
+@NamedQuery( name = "Continent.byName", query = "SELECT c FROM ContinentsEntity c WHERE c.name = ?1")
 @Table(name = "continents", schema = "javaDatabase")
 public class ContinentsEntity {
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Id
     @Column(name = "id")
     private int id;
