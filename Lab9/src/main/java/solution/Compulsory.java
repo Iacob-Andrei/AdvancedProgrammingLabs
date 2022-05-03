@@ -11,6 +11,7 @@ public class Compulsory {
         ContinentRepository.create(11, "Oceania");
 
         ContinentsEntity continent1 = ContinentRepository.findById(1);
+        assert continent1 != null;
         System.out.println(continent1.getName());
 
         ContinentsEntity continent2 = ContinentRepository.findByName("Asia");

@@ -5,14 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="741ba4e7-6b6d-4f72-8548-b419e5697913" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/jpa-buddy.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/manager/ManagerFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/repository/ContinentRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/solution/Compulsory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/solution/CompulsoryTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/52e41412-74d5-4aa9-b64e-1298747457ab.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/52e41412-74d5-4aa9-b64e-1298747457ab.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/entity/ContinentsEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entity/ContinentsEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/solution/Compulsory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/solution/Compulsory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/solution/Compulsory.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/solution/Compulsory.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,6 +20,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="JUnit5 Test Class" />
       </list>
     </option>
   </component>
@@ -63,14 +61,22 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/src/main/java" />
   </component>
   <component name="RecentsManager">
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="solution" />
+    </key>
     <key name="ImportMappingsDialog.RecentPackages">
       <recent name="entity" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Compulsory">
+  <component name="RunManager" selected="JUnit.CompulsoryTest">
     <configuration name="Compulsory" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="solution.Compulsory" />
       <module name="Lab9" />
@@ -97,10 +103,59 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="CompulsoryTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Lab9" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="solution.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="solution" />
+      <option name="MAIN_CLASS_NAME" value="solution.CompulsoryTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CompulsoryTest.testFindById" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Lab9" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="solution.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="solution" />
+      <option name="MAIN_CLASS_NAME" value="solution.CompulsoryTest" />
+      <option name="METHOD_NAME" value="testFindById" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CompulsoryTest.testFindByName" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Lab9" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="solution.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="solution" />
+      <option name="MAIN_CLASS_NAME" value="solution.CompulsoryTest" />
+      <option name="METHOD_NAME" value="testFindByName" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.CompulsoryTest" />
+        <item itemvalue="JUnit.CompulsoryTest.testFindById" />
+        <item itemvalue="JUnit.CompulsoryTest.testFindByName" />
         <item itemvalue="Application.Compulsory" />
-        <item itemvalue="Application.EntityManagerFactory" />
       </list>
     </recent_temporary>
   </component>
@@ -115,6 +170,7 @@
       <workItem from="1651514163036" duration="840000" />
       <workItem from="1651554258673" duration="4000" />
       <workItem from="1651571529202" duration="5567000" />
+      <workItem from="1651580195845" duration="410000" />
     </task>
     <servers />
   </component>
