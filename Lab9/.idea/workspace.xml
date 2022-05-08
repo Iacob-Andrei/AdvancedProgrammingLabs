@@ -5,11 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="741ba4e7-6b6d-4f72-8548-b419e5697913" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/java/solution/CompulsoryTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab7 - Homework/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab7 - Homework/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab8/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab8/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/52e41412-74d5-4aa9-b64e-1298747457ab.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/52e41412-74d5-4aa9-b64e-1298747457ab.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/solution/Compulsory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/solution/Compulsory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/solution/Compulsory.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/solution/Compulsory.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -171,6 +170,8 @@
       <workItem from="1651554258673" duration="4000" />
       <workItem from="1651571529202" duration="5567000" />
       <workItem from="1651580195845" duration="410000" />
+      <workItem from="1651582854982" duration="468000" />
+      <workItem from="1652008418608" duration="595000" />
     </task>
     <servers />
   </component>
