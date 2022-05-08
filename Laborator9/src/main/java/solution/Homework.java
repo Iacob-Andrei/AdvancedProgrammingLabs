@@ -1,16 +1,16 @@
 package solution;
 
-import entity.ContinentsEntity;
-import entity.CountriesEntity;
+import entity.*;
+import repository.*;
+import imports.ImportCities;
 import manager.ManagerFactory;
-import repository.ContinentsRepo;
-import repository.CountriesRepo;
+
 
 public class Homework {
 
     public static void main(String[] args) {
 
-
+        ImportCities.insertCities();
         ManagerFactory.close();
     }
 }

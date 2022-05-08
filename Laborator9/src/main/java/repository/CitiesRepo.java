@@ -4,6 +4,7 @@ import entity.CitiesEntity;
 import manager.ManagerFactory;
 
 import javax.persistence.EntityManager;
+import javax.persistence.NoResultException;
 import javax.persistence.TypedQuery;
 
 public class CitiesRepo implements AbstractRepo<CitiesEntity, Integer, String>{
@@ -21,18 +22,29 @@ public class CitiesRepo implements AbstractRepo<CitiesEntity, Integer, String>{
     @Override
     public CitiesEntity findById(Integer id) {
 
-        EntityManager em = ManagerFactory.getEntityManager().createEntityManager();
-        TypedQuery<CitiesEntity> typedQuery = em.createNamedQuery("Cities.findById", CitiesEntity.class).setParameter("id", id);
+        try {
+            EntityManager em = ManagerFactory.getEntityManager().createEntityManager();
+            TypedQuery<CitiesEntity> typedQuery = em.createNamedQuery("Cities.findById", CitiesEntity.class).setParameter("id", id);
 
-        return typedQuery.getSingleResult();
+            return typedQuery.getSingleResult();
+        }
+        catch( NoResultException e){
+            e.printStackTrace();
+            return null;
+        }
     }
 
     @Override
     public CitiesEntity findByName(String name) {
 
-        EntityManager em = ManagerFactory.getEntityManager().createEntityManager();
-        TypedQuery<CitiesEntity> typedQuery = em.createNamedQuery("Cities.findByName", CitiesEntity.class).setParameter("name", name);
+        try {
+            EntityManager em = ManagerFactory.getEntityManager().createEntityManager();
+            TypedQuery<CitiesEntity> typedQuery = em.createNamedQuery("Cities.findByName", CitiesEntity.class).setParameter("name", name);
 
-        return typedQuery.getSingleResult();
+            return typedQuery.getSingleResult();
+        }catch (NoResultException e){
+            e.printStackTrace();
+            return null;
+        }
     }
 }
