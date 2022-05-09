@@ -8,10 +8,17 @@ public class ManagerFactory {
 
     private ManagerFactory(){}
 
+    /**
+     * getter
+     * @return entityManagerFactory object
+     */
     public static javax.persistence.EntityManagerFactory getEntityManager() {
         return entityManagerFactory;
     }
 
+    /**
+     * closing the entityManagerFactory
+     */
     public static void close(){
         entityManagerFactory.close();
     }

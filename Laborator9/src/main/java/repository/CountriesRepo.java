@@ -9,6 +9,10 @@ import javax.persistence.TypedQuery;
 
 public class CountriesRepo implements AbstractRepo<CountriesEntity, Integer, String>{
 
+    /**
+     * insert the entity into the database
+     * @param entity that needs to be added
+     */
     @Override
     public void create(CountriesEntity entity) {
 
@@ -19,6 +23,11 @@ public class CountriesRepo implements AbstractRepo<CountriesEntity, Integer, Str
         em.close();
     }
 
+    /**
+     * search into the database a country that has the specified id
+     * @param id criteria
+     * @return the found object
+     */
     @Override
     public CountriesEntity findById(Integer id) {
 
@@ -28,6 +37,11 @@ public class CountriesRepo implements AbstractRepo<CountriesEntity, Integer, Str
         return typedQuery.getSingleResult();
     }
 
+    /**
+     * search into the database a country that has the specified name
+     * @param name criteria
+     * @return the found object
+     */
     @Override
     public CountriesEntity findByName(String name) {
 

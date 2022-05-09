@@ -9,6 +9,10 @@ import javax.persistence.TypedQuery;
 
 public class CitiesRepo implements AbstractRepo<CitiesEntity, Integer, String>{
 
+    /**
+     * insert the entity into the database
+     * @param entity that needs to be added
+     */
     @Override
     public void create(CitiesEntity entity) {
 
@@ -19,6 +23,11 @@ public class CitiesRepo implements AbstractRepo<CitiesEntity, Integer, String>{
         em.close();
     }
 
+    /**
+     * search into the database a city that has the specified id
+     * @param id criteria
+     * @return the found object
+     */
     @Override
     public CitiesEntity findById(Integer id) {
 
@@ -34,6 +43,11 @@ public class CitiesRepo implements AbstractRepo<CitiesEntity, Integer, String>{
         }
     }
 
+    /**
+     * search into the database a city that has the specified name
+     * @param name criteria
+     * @return the found object
+     */
     @Override
     public CitiesEntity findByName(String name) {
 
