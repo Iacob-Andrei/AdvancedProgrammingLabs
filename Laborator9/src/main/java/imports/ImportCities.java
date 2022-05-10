@@ -15,8 +15,6 @@ public class ImportCities {
      */
     public static void insertCities(){
 
-        long startTime = System.nanoTime();
-
         EntityManager em = ManagerFactory.getEntityManager().createEntityManager();
         em.getTransaction().begin();
 
@@ -38,9 +36,6 @@ public class ImportCities {
             id++;
             System.out.println(id);
         }
-
-        long endTime = System.nanoTime();
-        System.out.println( (endTime - startTime) / 1_000_000 / 1_000 / 60  );
         em.getTransaction().commit();
     }
 }
