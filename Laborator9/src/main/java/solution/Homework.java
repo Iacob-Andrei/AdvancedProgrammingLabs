@@ -29,7 +29,7 @@ public class Homework {
         }
         System.out.println();
 
-        //ImportCities.insertCities();
+        ImportCities.insertCities();
         ManagerFactory.close();
     }
 }
