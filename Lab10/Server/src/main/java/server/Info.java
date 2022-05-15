@@ -1,8 +1,6 @@
 package server;
 
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.IOException;
+import java.io.*;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
@@ -94,7 +92,7 @@ public class Info {
         Path path = Paths.get("src/main/resources/users.txt");
 
         try {
-            Files.write(path, (user + "\n").getBytes(), StandardOpenOption.APPEND);  //Append mode
+           Files.write(path, (user + "\n").getBytes(), StandardOpenOption.APPEND);  //Append mode
             users.add(user);
             friends.put(user,new LinkedHashSet<>());
             messages.put(user,new LinkedList<>());
@@ -123,14 +121,14 @@ public class Info {
         }
     }
 
-    public static String sendMessage(String to, String message) {
+    public static String sendMessage(String from,String to, String message) {
         if (!users.contains(to))
             return "user does not exists.";
 
         Path path = Paths.get("src/main/resources/messages.txt");
         message = message.trim();
         try{
-            Files.write(path, (to + " " + message + "\n").getBytes(), StandardOpenOption.APPEND);
+            Files.write(path, (from + " -> " + to + " " + message + "\n").getBytes(), StandardOpenOption.APPEND);
             messages.get(to).add(message);
             return "message sent to " + to;
         } catch (IOException e) {

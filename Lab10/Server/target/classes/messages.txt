@@ -1,3 +1,14 @@
-andrei  salut
-andrei buna ziua
-raluca hello
+andrei buna
+raluca ce faci?
+raluca salut si tie
+raluca pa
+user pa
+user2 hei
+user2 buna
+user buna
+andrei noapte buna
+user2 noapte buna
+raluca dormeo
+user dormeo
+raluca -> andrei gata cred
+raluca -> user2 gata cred

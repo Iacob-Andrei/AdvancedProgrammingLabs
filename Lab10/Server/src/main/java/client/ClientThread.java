@@ -38,9 +38,17 @@ public class ClientThread extends Thread {
                 Command command = new Command(request);
                 answer = commands.runCommand(command, clientState);
 
-                if( answer.equals("exit") ){
+                if( request.equals("exit") ){
                     System.out.println("Connection closed with the client!");
                     break;
+                }
+
+                if(request.equals("stop")){
+                    out.println("Server and client stopped");
+                    out.flush();
+                    socket.close();
+                    System.exit(0);
+
                 }
 
                 System.out.println("[RESPONSE] " + answer);
@@ -51,10 +59,10 @@ public class ClientThread extends Thread {
                     out.flush();
                     System.out.println("[SENT] " + line);
                 }
-                /*
+
                 out.println("");
                 out.flush();
-*/
+
                 socket.setSoTimeout(20_000);
             }
         } catch(SocketException e){

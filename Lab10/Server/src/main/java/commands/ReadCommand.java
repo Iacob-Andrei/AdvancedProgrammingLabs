@@ -13,7 +13,11 @@ public class ReadCommand implements ExecuteCommand {
         if (!clientState.isLoggedIn())
             return "Please login first";
 
-        return Info.getMessages(clientState.getUserName());
+        String messages = Info.getMessages(clientState.getUserName());
+        if(messages.equals(""))
+            return "You have no messages";
+        else
+            return messages;
     }
 }
 

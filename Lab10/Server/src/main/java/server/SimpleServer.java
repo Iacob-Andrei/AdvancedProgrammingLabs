@@ -21,6 +21,7 @@ public class SimpleServer {
         commandList.add("read", new ReadCommand());
         commandList.add("logout", new LogoutCommand());
         commandList.add("exit", new ExitCommand());
+        commandList.add("seeUsers", new SeeUsersCommand());
 
         try (ServerSocket serverSocket = new ServerSocket(PORT)) {
             while (true) {
