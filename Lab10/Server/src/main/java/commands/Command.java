@@ -9,7 +9,7 @@ public class Command {
     private List<String> commandArgs = new LinkedList<>();
 
     public Command(String fullCommand) {
-        String[] words = fullCommand.split(" ");
+        String[] words = fullCommand.split(" ", 2);
         name = words[0];
         commandArgs.addAll(Arrays.asList(words).subList(1, words.length));
     }
@@ -18,15 +18,7 @@ public class Command {
         return name;
     }
 
-    public void setName(String name) {
-        this.name = name;
-    }
-
     public List<String> getCommandArgs() {
         return commandArgs;
-    }
-
-    public void setCommandArgs(List<String> commandArgs) {
-        this.commandArgs = commandArgs;
     }
 }

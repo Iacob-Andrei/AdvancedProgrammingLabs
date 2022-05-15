@@ -1,6 +1,5 @@
-package server;
+package client;
 
-import client.ClientState;
 import commands.Command;
 import commands.CommandList;
 
@@ -9,8 +8,10 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.PrintWriter;
 import java.net.Socket;
+import java.net.SocketException;
+import java.util.List;
 
-class ClientThread extends Thread {
+public class ClientThread extends Thread {
 
     private final Socket socket;
     public CommandList commands;
@@ -33,27 +34,37 @@ class ClientThread extends Thread {
             while( (request = in.readLine()) != null ){
 
                 System.out.println("[REQUEST] " + request);
+
                 Command command = new Command(request);
                 answer = commands.runCommand(command, clientState);
+
+                if( answer.equals("exit") ){
+                    System.out.println("Connection closed with the client!");
+                    break;
+                }
+
                 System.out.println("[RESPONSE] " + answer);
-                String[] responseLines = answer.split("\n");
+                List<String> responseLines = List.of(answer.split("\n"));
 
                 for (String line : responseLines) {
                     out.println(line);
                     out.flush();
-
                     System.out.println("[SENT] " + line);
                 }
+                /*
                 out.println("");
                 out.flush();
-
+*/
+                socket.setSoTimeout(20_000);
             }
-
-        } catch (IOException e) {
+        } catch(SocketException e){
+            System.err.println("User " + clientState.getUserName() + " has timed out!");
+        }
+        catch (IOException e) {
             System.err.println("Communication error... " + e);
         }finally {
             try {
-                socket.close(); // or use try-with-resources
+                socket.close();
             } catch (IOException e) {
                 e.printStackTrace();
             }

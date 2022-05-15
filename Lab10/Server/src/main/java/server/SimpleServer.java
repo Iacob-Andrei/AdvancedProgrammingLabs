@@ -1,6 +1,7 @@
 package server;
 
 import commands.*;
+import client.ClientThread;
 
 import java.io.IOException;
 import java.net.ServerSocket;
@@ -19,6 +20,7 @@ public class SimpleServer {
         commandList.add("send", new SendCommand());
         commandList.add("read", new ReadCommand());
         commandList.add("logout", new LogoutCommand());
+        commandList.add("exit", new ExitCommand());
 
         try (ServerSocket serverSocket = new ServerSocket(PORT)) {
             while (true) {

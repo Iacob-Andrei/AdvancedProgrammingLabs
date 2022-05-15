@@ -5,9 +5,11 @@ import server.Info;
 
 import java.util.List;
 
-public class AddFriendCommand implements Execute{
+public class AddFriendCommand implements ExecuteCommand {
+
     @Override
     public String executeCommand(List<String> args, ClientState clientState) {
+
         if (args.size() == 0)
             return "please provide a friend name.";
 
@@ -25,5 +27,5 @@ public class AddFriendCommand implements Execute{
 
         return result.toString();
     }
-    }
+}
 

@@ -16,8 +16,8 @@ public class Info {
 
     static {
         load_users();
-       load_friends();
-       load_messages();
+        load_friends();
+        load_messages();
     }
 
     private static void load_users() {
@@ -26,6 +26,7 @@ public class Info {
             Scanner reader = new Scanner(users_file);
 
             while (reader.hasNextLine()) {
+
                 String user = reader.nextLine();
                 if (!user.equals("")) {
                     users.add(user);
@@ -40,16 +41,17 @@ public class Info {
     }
 
     private static void load_friends() {
+
         try {
             File friends_file = new File("src/main/resources/friends.txt");
             Scanner reader = new Scanner(friends_file);
 
             while (reader.hasNextLine()) {
                 String line = reader.nextLine();
-                String[] friendsAssoc = line.split(" ");
+                List<String> friendsAssoc = List.of(line.split(" "));
 
-                friends.get(friendsAssoc[0]).add(friendsAssoc[1]);
-                friends.get(friendsAssoc[1]).add(friendsAssoc[0]);
+                friends.get(friendsAssoc.get(0)).add(friendsAssoc.get(1));
+                friends.get(friendsAssoc.get(1)).add(friendsAssoc.get(0));
 
             }
         } catch (FileNotFoundException e) {
@@ -58,6 +60,7 @@ public class Info {
     }
 
     private static void load_messages() {
+
         try {
             File messages_file = new File("src/main/resources/messages.txt");
             Scanner reader = new Scanner(messages_file);
@@ -72,7 +75,8 @@ public class Info {
 
                     String text = message.get(1);
 
-                    String[] to = toList.split(",");
+                    List<String> to = List.of(toList.split(","));
+
                     for (String receiver : to) {
                         messages.get(receiver).add(text);
                     }
@@ -82,6 +86,7 @@ public class Info {
             e.printStackTrace();
         }
     }
+
     public static String addUser(String user) {
         if (users.contains(user))
             return "user already exists";
@@ -137,16 +142,8 @@ public class Info {
         return users;
     }
 
-    public static void setUsers(List<String> users) {
-        Info.users = users;
-    }
-
     public static Map<String, Set<String>> getFriends() {
         return friends;
-    }
-
-    public static void setFriends(Map<String, Set<String>> friends) {
-        Info.friends = friends;
     }
 
     public static String getMessages(String userName) {
@@ -164,9 +161,5 @@ public class Info {
             result = new StringBuilder(result.substring(0, result.length() - 1));
 
         return result.toString();
-    }
-
-    public static void setMessages(Map<String, List<String>> messages) {
-        Info.messages = messages;
     }
 }

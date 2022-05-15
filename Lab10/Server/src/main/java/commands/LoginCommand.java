@@ -5,10 +5,11 @@ import server.Info;
 
 import java.util.List;
 
-public class LoginCommand implements Execute {
+public class LoginCommand implements ExecuteCommand {
 
     @Override
     public String executeCommand(List<String> args, ClientState clientState) {
+
         List<String> globalStateUsers = Info.getUsers();
 
         if (args.size() == 0)
@@ -25,5 +26,5 @@ public class LoginCommand implements Execute {
 
         return "Logged in failed. User does not exists.";
     }
-    }
+}
 

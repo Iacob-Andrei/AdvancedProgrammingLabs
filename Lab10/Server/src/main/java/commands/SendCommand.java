@@ -6,9 +6,11 @@ import server.Info;
 import java.util.List;
 import java.util.Set;
 
-public class SendCommand implements Execute{
+public class SendCommand implements ExecuteCommand {
+
     @Override
     public String executeCommand(List<String> args, ClientState clientState) {
+
         if (args.size() == 0)
             return "please provide an message";
 

@@ -41,16 +41,21 @@ public class SimpleClient {
             String request = standardInput.readLine();
             String response;
 
-            while( !request.equals("exit") ){
+            while( true ){
 
                 out.println(request);
+                if(request.equals("exit")){
+                    socket.close();
+                    System.exit(0);
+                }
+
                 do {
                     response = in.readLine();
                     System.out.println(response);
                 } while (!response.equals(""));
 
 
-              /*  if(response.equals("Server stopped.")){
+                /*  if(response.equals("Server stopped.")){
                     socket.close();
                     System.exit(0);
                 }*/

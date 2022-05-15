@@ -5,9 +5,11 @@ import server.Info;
 
 import java.util.List;
 
-public class RegisterCommand  implements Execute{
+public class RegisterCommand  implements ExecuteCommand {
+
     @Override
     public String executeCommand(List<String> args, ClientState clientState) {
+
         if (args.size() == 0)
             return "Please provide userName";
 
