@@ -1,5 +1,7 @@
 package server;
 
+import commands.*;
+
 import java.io.IOException;
 import java.net.ServerSocket;
 import java.net.Socket;
@@ -8,22 +10,25 @@ public class SimpleServer {
 
     public static final int PORT = 8100;
 
-    public SimpleServer() throws IOException {
+    public SimpleServer() {
 
-        ServerSocket serverSocket = null ;
-        try {
-            serverSocket = new ServerSocket(PORT);
+        CommandList commandList = new CommandList();
+        commandList.add("register", new RegisterCommand());
+        commandList.add("login", new LoginCommand());
+        commandList.add("friend", new AddFriendCommand());
+        commandList.add("send", new SendCommand());
+        commandList.add("read", new ReadCommand());
+        commandList.add("logout", new LogoutCommand());
 
+        try (ServerSocket serverSocket = new ServerSocket(PORT)) {
             while (true) {
-                System.out.println ("Waiting for a client ...");
+                System.out.println("[WAITING FOR CLIENT...]");
                 Socket socket = serverSocket.accept();
-                new ClientThread(socket).start();
+                ClientThread client = new ClientThread(socket, commandList);
+                new Thread(client).start();
             }
         } catch (IOException e) {
-            System.err. println ("Ooops... " + e);
-        } finally {
-            assert serverSocket != null;
-            serverSocket.close();
+            e.printStackTrace();
         }
     }
 }
