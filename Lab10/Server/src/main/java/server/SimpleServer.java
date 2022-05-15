@@ -19,7 +19,6 @@ public class SimpleServer {
                 Socket socket = serverSocket.accept();
                 new ClientThread(socket).start();
             }
-
         } catch (IOException e) {
             System.err. println ("Ooops... " + e);
         } finally {

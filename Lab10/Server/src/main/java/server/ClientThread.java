@@ -8,7 +8,7 @@ import java.net.Socket;
 
 class ClientThread extends Thread {
 
-    private Socket socket = null ;
+    private final Socket socket;
 
     public ClientThread (Socket socket) {
         this.socket = socket ;
@@ -18,13 +18,19 @@ class ClientThread extends Thread {
         try {
             // Get the request from the input stream: client → server
             BufferedReader in = new BufferedReader( new InputStreamReader(socket.getInputStream()) );
-            String request = in.readLine();
-
             // Send the response to the output stream: server → client
             PrintWriter out = new PrintWriter(socket.getOutputStream());
-            String answer = "Hello " + request + "!";
-            out.println(answer);
-            out.flush();
+
+            String request, answer;
+
+            while( (request = in.readLine()) != null ){
+
+                System.out.println("[REQUEST] " + request);
+                answer = "Hello " + request + "!";
+                out.println(answer);
+                out.flush();
+            }
+
         } catch (IOException e) {
             System.err.println("Communication error... " + e);
         }finally {
