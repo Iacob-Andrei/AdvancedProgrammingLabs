@@ -24,6 +24,7 @@ public class SimpleServer {
         commandList.add("createSVG", new CreateSVGCommand());
         commandList.add("createHTML", new CreateHTMLCommand());
         commandList.add("proprieties", new SocialPropertiesCommand());
+        commandList.add("flow",new MaximumFlowCommand());
 
         try (ServerSocket serverSocket = new ServerSocket(PORT)) {
             while (true) {

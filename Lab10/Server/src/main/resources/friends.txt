@@ -1,10 +1,7 @@
 raluca andrei
-andrei raluca
-andrei user
+raluca user3
+user3 raluca
+andrei user2
+user2 andrei
 user andrei
-user2 raluca
-raluca user2
-user3 user2
-user2 user3
-user3 user
-user user3
+andrei user

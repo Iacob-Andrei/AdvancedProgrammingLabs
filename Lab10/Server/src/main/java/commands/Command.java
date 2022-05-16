@@ -4,6 +4,9 @@ import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.List;
 
+/**
+ * A class where the command is split in order to find its name and its arguments
+ */
 public class Command {
     private String name;
     private List<String> commandArgs = new LinkedList<>();

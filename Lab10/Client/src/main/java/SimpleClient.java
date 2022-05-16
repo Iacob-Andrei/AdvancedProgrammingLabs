@@ -30,6 +30,7 @@ public class SimpleClient {
         System.out.println("10. Create SVG representation of social network - createSVG;");
         System.out.println("11. Create HTML representation of social network using the SVG ( call 'createSVG' to update social network ) - createHTML;");
         System.out.println("12. Display statistical proprieties about social network density - proprieties;");
+        System.out.println("13. Display the maximum flow of this social network - flow;");
 
         System.out.print("Enter command: ");
     }

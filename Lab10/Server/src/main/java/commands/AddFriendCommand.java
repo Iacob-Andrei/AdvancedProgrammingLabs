@@ -7,6 +7,11 @@ import java.util.List;
 
 public class AddFriendCommand implements ExecuteCommand {
 
+    /**
+     * @param args the arguments from the command
+     * @param clientState checks if the user is logged in or not
+     * @return the method adds the friendship in friends.txt
+     */
     @Override
     public String executeCommand(List<String> args, ClientState clientState) {
 
@@ -14,7 +19,7 @@ public class AddFriendCommand implements ExecuteCommand {
             return "please provide a friend name.";
 
         if (!clientState.isLoggedIn())
-            return "Please loggin first.";
+            return "Please login first.";
 
         String from = clientState.getUserName();
 

@@ -7,6 +7,11 @@ import java.util.List;
 
 public class ReadCommand implements ExecuteCommand {
 
+    /**
+     * @param args  the arguments from the command
+     * @param clientState checks if the user is logged in or not
+     * @return shows all the messages from messages.txt
+     */
     @Override
     public String executeCommand(List<String> args, ClientState clientState) {
 

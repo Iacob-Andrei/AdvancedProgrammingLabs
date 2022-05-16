@@ -8,6 +8,9 @@ import java.util.Set;
 
 public class SendCommand implements ExecuteCommand {
 
+    /**
+     * this method writes in messages.txt the sender, receiver and the text of a message
+     */
     @Override
     public String executeCommand(List<String> args, ClientState clientState) {
 

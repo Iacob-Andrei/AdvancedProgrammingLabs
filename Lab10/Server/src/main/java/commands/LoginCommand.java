@@ -10,7 +10,7 @@ public class LoginCommand implements ExecuteCommand {
     @Override
     public String executeCommand(List<String> args, ClientState clientState) {
 
-        List<String> globalStateUsers = Info.getUsers();
+        List<String> users = Info.getUsers();
 
         if (args.size() == 0)
             return "Please provide an username.";
@@ -18,7 +18,7 @@ public class LoginCommand implements ExecuteCommand {
         if (clientState.isLoggedIn())
             return "already logged in";
 
-        if (globalStateUsers.contains(args.get(0))) {
+        if (users.contains(args.get(0))) {
             clientState.setLoggedIn(true);
             clientState.setUserName(args.get(0));
             return "logged in";
