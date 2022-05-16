@@ -3,7 +3,7 @@ package client;
 public class ClientState {
 
     private boolean loggedIn = false;
-    private String  userName = null;
+    private String  userName = "no log";
 
     public boolean isLoggedIn() {
         return loggedIn;

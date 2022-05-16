@@ -13,19 +13,23 @@ public class SimpleClient {
     public SimpleClient(String serverAddress, int PORT){
         this.serverAddress = serverAddress;
         this.PORT = PORT;
+        listen();
     }
 
     public void showCommands() {
         System.out.println("These are the valid commands:");
-        System.out.println("1. Register - register <username>");
-        System.out.println("2. Login - login <username>");
-        System.out.println("3. See all the users - seeUsers");
-        System.out.println("4. Add Friend (Needs to be registered!)- friend <friend_username>");
-        System.out.println("5. Send message to all friends - send <message>");
-        System.out.println("6. Read all the messages - read");
-        System.out.println("7. Logout - logout <username>");
-        System.out.println("8. Exit (stops the client) - exit");
-        System.out.println("9. Stop (stops the client & server) - stop");
+        System.out.println("1. Register - register <username>;");
+        System.out.println("2. Login - login <username>;");
+        System.out.println("3. See all the users - seeUsers;");
+        System.out.println("4. Add Friend (Needs to be registered!)- friend <friend_username>;");
+        System.out.println("5. Send message to all friends - send <message>;");
+        System.out.println("6. Read all the messages - read;");
+        System.out.println("7. Logout - logout;");
+        System.out.println("8. Exit (stops the client) - exit;");
+        System.out.println("9. Stop (stops the client & server) - stop;");
+        System.out.println("10. Create SVG representation of social network - createSVG;");
+        System.out.println("11. Create HTML representation of social network using the SVG ( call 'createSVG' to update social network ) - createHTML;");
+        System.out.println("12. Display statistical proprieties about social network density - proprieties;");
 
         System.out.print("Enter command: ");
     }
@@ -46,6 +50,7 @@ public class SimpleClient {
             while( true ) {
 
                 out.println(request);
+
                 if (request.equals("exit")) {
                     socket.close();
                     System.exit(0);
@@ -59,11 +64,8 @@ public class SimpleClient {
                     System.out.println(response);
                 } while (!response.equals(""));
 
-
                 System.out.print("Enter command: ");
                 request = standardInput.readLine();
-
-                socket.setSoTimeout(20_000);
             }
 
             }catch(SocketException e){

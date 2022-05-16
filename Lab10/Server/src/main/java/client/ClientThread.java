@@ -9,6 +9,7 @@ import java.io.InputStreamReader;
 import java.io.PrintWriter;
 import java.net.Socket;
 import java.net.SocketException;
+import java.net.SocketTimeoutException;
 import java.util.List;
 
 public class ClientThread extends Thread {
@@ -35,9 +36,6 @@ public class ClientThread extends Thread {
 
                 System.out.println("[REQUEST] " + request);
 
-                Command command = new Command(request);
-                answer = commands.runCommand(command, clientState);
-
                 if( request.equals("exit") ){
                     System.out.println("Connection closed with the client!");
                     break;
@@ -48,8 +46,10 @@ public class ClientThread extends Thread {
                     out.flush();
                     socket.close();
                     System.exit(0);
-
                 }
+
+                Command command = new Command(request);
+                answer = commands.runCommand(command, clientState);
 
                 System.out.println("[RESPONSE] " + answer);
                 List<String> responseLines = List.of(answer.split("\n"));
@@ -63,9 +63,9 @@ public class ClientThread extends Thread {
                 out.println("");
                 out.flush();
 
-                socket.setSoTimeout(20_000);
+                socket.setSoTimeout(10_000);
             }
-        } catch(SocketException e){
+        } catch(SocketTimeoutException e){
             System.err.println("User " + clientState.getUserName() + " has timed out!");
         }
         catch (IOException e) {

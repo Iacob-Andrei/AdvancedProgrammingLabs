@@ -20,8 +20,10 @@ public class SimpleServer {
         commandList.add("send", new SendCommand());
         commandList.add("read", new ReadCommand());
         commandList.add("logout", new LogoutCommand());
-        commandList.add("exit", new ExitCommand());
         commandList.add("seeUsers", new SeeUsersCommand());
+        commandList.add("createSVG", new CreateSVGCommand());
+        commandList.add("createHTML", new CreateHTMLCommand());
+        commandList.add("proprieties", new SocialPropertiesCommand());
 
         try (ServerSocket serverSocket = new ServerSocket(PORT)) {
             while (true) {
