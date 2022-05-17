@@ -49,6 +49,7 @@ public class CreateSVGCommand implements ExecuteCommand {
 
     /**
      * creates a PNG representation of the social network
+     * JGraphXAdapter is used to graphically generate the graph
      */
     private void createImagePNG() {
 
@@ -69,6 +70,8 @@ public class CreateSVGCommand implements ExecuteCommand {
     /**
      * creates an SVG representation of the social network
      * based on the previous created PNG
+     * DOMImplementation object to generate the XML proprieties of the SVG
+     * SVGGraphics2D ( Apache Batik ) convert PNG to SVG
      */
     private void createSvg() {
 
@@ -86,9 +89,8 @@ public class CreateSVGCommand implements ExecuteCommand {
             BufferedImage img = ImageIO.read(imageSrc);
             graphics.drawImage(img,0,0,null);
 
-            boolean useCSS = true;
             Writer out = new OutputStreamWriter(new FileOutputStream("src/main/resources/social.svg"), StandardCharsets.UTF_8);
-            graphics.stream(out, useCSS);
+            graphics.stream(out, true);
         } catch (IOException e){
             e.printStackTrace();
         }
