@@ -22,10 +22,15 @@ public class Relationship {
     private Person person2;
 
     public Relationship(){
-
     }
 
     public Relationship(Person person1, Person person2){
+        this.person1 = person1;
+        this.person2 = person2;
+    }
+
+    public Relationship(Long id, Person person1, Person person2){
+        this.id = id;
         this.person1 = person1;
         this.person2 = person2;
     }
