@@ -1,10 +1,12 @@
 package com.example.demo.relations.services;
 
+import com.example.demo.person.Person;
 import com.example.demo.person.repository.PersonRepository;
 import com.example.demo.relations.Relationship;
 import com.example.demo.relations.repository.RelationshipRepository;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
@@ -32,8 +34,29 @@ public class RelationshipService {
 
     public void addNewRelation(Relationship relation) {
 
-        // TODO check
-        //  if relation.getPerson1() and relation.getPerson1() exists
-        //  if ok, add to relationship table
+        if( !personRepository.existsById(relation.getPerson1().getId()) )
+            throw new IllegalStateException("id1 invalid!");
+
+        if( !personRepository.existsById(relation.getPerson2().getId()) )
+            throw new IllegalStateException("id2 invalid!");
+
+        Person person1 =  personRepository.getById(relation.getPerson1().getId() );
+        Person person2 =  personRepository.getById(relation.getPerson2().getId() );
+
+        relation.setPerson1(person1);
+        relation.setPerson2(person2);
+        relationshipRepository.save(relation);
+
+        Relationship inverted = new Relationship(person2, person1);
+        relationshipRepository.save(inverted);
+    }
+
+    public List<Optional<Person>> getMostPopular(int number) {
+
+        List<Long> ids = relationshipRepository.findTopByPerson1().subList(0, number);
+
+        List<Optional<Person>> firstPeople = new ArrayList<>();
+        ids.forEach(id -> firstPeople.add(personRepository.findById(id)));
+        return firstPeople;
     }
 }
