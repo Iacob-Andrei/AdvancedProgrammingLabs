@@ -17,3 +17,8 @@ Compulsory & Homework
   "name": "Raluk",
   "age": "21"
 }
+- [localhost:8081//delete/{personId}](https://localhost:8081/persons/delete/1)
+  - HTTP DELETE request
+- [localhost:8081/persons/update/{personId}](https://localhost:8081/persons/update/{personId})  
+  - HTTP PUT request, updades person with specified id   
+    - PUT http://localhost:8081/persons/update/4?name=Raluk
