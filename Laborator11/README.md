@@ -10,7 +10,7 @@ Compulsory & Homework
   - HTTP GET request, return person with id {personID}
 - [localhost:8081/persons](https://localhost:8081/persons)  
   - HTTP POST request example:
-POST http://localhost:8081/persons
+- POST http://localhost:8081/persons
 Content-Type: application/json
 {
   "id": 4,
