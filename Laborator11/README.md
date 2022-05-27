@@ -40,3 +40,5 @@ Compulsory & Homework
     "age": null
   }
 }
+- [localhost:8081/relationship/popular/{firstN}](https://localhost:8081/relationship/popular/2)
+- HTTP GET request, return first n most popular persons in network
