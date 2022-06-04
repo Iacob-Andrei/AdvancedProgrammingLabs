@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="173dfa6c-d7b7-495f-9d99-e438f73f018f" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../Lab12/src/main/java/GlobalTestBonus.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lab12/src/main/java/TestHomework.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lab12/src/main/java/annotations/Test.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lab12/src/main/java/customCompiler/Compiler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lab12/src/main/java/customJavaP/CustomJavaP.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lab12/src/main/java/loadAndExecute/LoadAndExecuteCompulsory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lab12/src/main/java/loadAndExecute/LoadAndExecuteHomework.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lab12/src/main/java/solution/BonusMain.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lab12/src/main/java/solution/CompulsoryMain.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lab12/src/main/java/solution/HomeworkMain.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lab12/src/main/java/testClasses/TestClass.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Client/src/main/java/com/example/client/Constants.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Client/src/main/java/com/example/client/RestClient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Client/src/main/java/com/example/client/model/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mvnw" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mvnw.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/DemoApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/person/Person.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/person/controller/PersonController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/person/repository/PersonRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/person/services/PersonService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/relations/Relationship.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/relations/controller/RelationshipController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/relations/repository/RelationshipRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/relations/services/RelationshipService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/demo/DemoApplicationTests.java" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="JpbToolWindowState">
+    <option name="myId2FirstActivated">
+      <map>
+        <entry key="com.haulmont.jpb.jpaStructure" value="true" />
+      </map>
+    </option>
+    <option name="myId2Visible">
+      <map>
+        <entry key="com.haulmont.jpb.jpaStructure" value="false" />
+      </map>
+    </option>
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="Use Maven wrapper" />
+        <option name="useMavenConfig" value="true" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="2A7kNBWliGxtR63t90748GEVO57" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="173dfa6c-d7b7-495f-9d99-e438f73f018f" name="Changes" comment="" />
+      <created>1654367980545</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1654367980545</updated>
+      <workItem from="1654367981142" duration="161000" />
+      <workItem from="1654368429913" duration="201000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>
