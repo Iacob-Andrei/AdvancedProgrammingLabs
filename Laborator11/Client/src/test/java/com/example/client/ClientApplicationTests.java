@@ -14,7 +14,7 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 class ClientApplicationTests {
 
     private static final String URL = "localhost:8081";
-    private WebClient webClient = WebClient.create();
+    private final WebClient webClient = WebClient.create();
     RestClient restClient = new RestClient(webClient);
 
     @Test
