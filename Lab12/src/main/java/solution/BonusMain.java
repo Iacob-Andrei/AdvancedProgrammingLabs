@@ -8,6 +8,7 @@ import java.lang.reflect.InvocationTargetException;
 public class BonusMain {
 
     public static void main(String[] args) throws InvocationTargetException, InstantiationException, IllegalAccessException, NoSuchMethodException {
+
         String path = "E:\\Codes\\AdvancedProgrammingLabs\\Lab12\\src\\main\\java\\GlobalTestBonus.java";
 
         if(Compiler.compile(path)) {

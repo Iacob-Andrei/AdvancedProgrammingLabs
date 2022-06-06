@@ -8,8 +8,8 @@ import java.util.List;
 public class Compiler {
 
     public static boolean compile(String path) {
-        File file = new File(path);
 
+        File file = new File(path);
         JavaCompiler javaCompiler = ToolProvider.getSystemJavaCompiler();
         DiagnosticCollector<JavaFileObject> ds = new DiagnosticCollector<>();
 

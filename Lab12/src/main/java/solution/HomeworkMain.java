@@ -39,7 +39,7 @@ public class HomeworkMain {
                 if (jarEntry == null) {
                     break;
                 }
-                if (jarEntry.getName().endsWith(".class")) {
+                if (jarEntry.getName().endsWith(".jar")) {
                     classes.add(jarEntry.getName().replaceAll("/", "\\."));
                 }
             }
@@ -50,9 +50,10 @@ public class HomeworkMain {
     }
 
     public static void main(String[] args) throws InvocationTargetException, InstantiationException, IllegalAccessException, NoSuchMethodException {
-        String path = "E:\\Codes\\AdvancedProgrammingLabs\\Lab12\\target\\classes";
 
+        String path = "E:\\Codes\\AdvancedProgrammingLabs\\Lab12\\target\\classes";
         List<String> classesInFolder = getClassNamesInFolder(path);
+
         for( String className : classesInFolder ){
             LoadAndExecuteHomework loadAndExecute = new LoadAndExecuteHomework(path, className.substring(0, className.length() - 6));
             loadAndExecute.execute();

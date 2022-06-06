@@ -36,10 +36,9 @@ public class LoadAndExecuteHomework {
     }
 
     public void execute() throws InstantiationException, IllegalAccessException, NoSuchMethodException, InvocationTargetException {
+
         Class myClass = load();
-
         Faker faker = new Faker();
-
         Object instance = myClass.getConstructor().newInstance();
 
         CustomJavaP.show(myClass);
@@ -47,15 +46,13 @@ public class LoadAndExecuteHomework {
         int annotatedMethodsFound = 0;
         int publicAnnotated = 0;
 
-        Method[] allMethods = myClass.getDeclaredMethods();
-
-        for (Method m : allMethods) {
+        for (Method m : myClass.getDeclaredMethods()) {
             if (m.isAnnotationPresent(Test.class)) {
                 annotatedMethodsFound++;
 
                 if (Modifier.isPublic(m.getModifiers()) || Modifier.isStatic(m.getModifiers())) {
-                    int parameterCount = m.getParameterCount();
 
+                    int parameterCount = m.getParameterCount();
                     publicAnnotated++;
 
                     try {
@@ -90,7 +87,6 @@ public class LoadAndExecuteHomework {
         System.out.println(publicAnnotated - invoked + " failed on call");
         System.out.println("\n");
     }
-
 
     public String getPath() {
         return path;

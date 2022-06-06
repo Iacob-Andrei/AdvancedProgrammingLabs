@@ -9,23 +9,20 @@ public class CustomJavaP {
 
         System.out.println("Fields of class");
 
-        Field[] fields = dynamicClass.getDeclaredFields();
-        for (Field field : fields) {
+        for (Field field : dynamicClass.getDeclaredFields()) {
             System.out.println(field);
         }
 
         System.out.println("\nConstructors of class");
 
-        Constructor<?>[] cons = dynamicClass.getDeclaredConstructors();
-        for (Constructor<?> constructor : cons) {
+        for (Constructor<?> constructor : dynamicClass.getDeclaredConstructors()) {
             System.out.println(constructor);
         }
 
         System.out.println("\nMethods of class");
-
-        Method[] methods = dynamicClass.getDeclaredMethods();
-        for (Method method : methods)
+        for (Method method : dynamicClass.getDeclaredMethods()) {
             System.out.println(method);
+        }
 
         System.out.println();
     }
